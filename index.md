@@ -1,37 +1,139 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/2217937757/-/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/2217937757/-/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>御 坂 美 琴</title>
+		<style type="text/css">
+			.{
+				margin: 0;
+				padding: 0;
+			}
+			.q0{
+				
+			}
+			.q3{
+				line-height: 100px;
+				font-size: 50px;
+				font-family: 'fangsong';
+				font-weight: bold;
+				text-align: center;
+			}
+			a:hover{         /*鼠标经过悬停的状态*/
+				color: #000000;
+				text-decoration:none
+			}
+			.q4{
+				text-align: center;
+				font-size: 50px;/*字号*/
+				letter-spacing: 20px;/*字间距*/
+				color: #000000;
+				font-family: 'FangSong';/*字体*/
+				font-weight: bold;/*加粗*/
+			}
+			.q5{
+				text-align: center;
+				font-size: 20px;
+				color: #000000;
+				line-height: 35px;
+			}
+			.music{
+				border: #000000 0px solid;
+				position: relative;
+				left: 0;
+				top: -600px;
+				opacity: 0.7;
+				color: #dd703e;
+				font-size: 20px;
+				font-weight: bold;
+				font-family: 'songti';
+			}
+			.video{
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!-- <div class="video" align="center">4
+			<video controls="controls"  poster="背景1.jpg" preload="auto"  webkit-playsinline="true" width="800" height="">
+			<source src="img/mv.mp4" type="video/mp4"></source>
+			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+		</video>
+		</div> -->
+		
+		<div class="q0" align="center">
+			<img src="img/背景1.jpg" width="800">
+		</div>
+		<hr/ size="3" color="#000000" align="center" width="800">
+			<div class="q3">
+				<a href="http://39.99.190.212/12312/其他作业/" target="_blank">其他作业</a>
+				<a href="http://39.99.190.212/12312/桃饱/" target="_blank">桃饱网</a>
+			</div>
+		<hr/ size="3" color="#000000" align="center" width="800">	
+		<div class="q4">
+			其他链接
+		</div>
+		<div class="q5">
+			<p>
+				<a href="http://www.baidu.com/" target="_blank">百度一下，你就知道</a>&nbsp;
+				<a href="https://www.bilibili.com/" target="_blank">bilibili弹幕网</a>&nbsp;
+				<a href="http://oeasy.org/" target="_blank">oeasy，会玩才会学</a>&nbsp;<br/>
+				<a href="https://account.aliyun.com/" target="_blank">云服务器管理平台</a>&nbsp;
+				<a href="https://convertio.co/zh/jfif-plt/" target="_blank">在线图片转换</a>&nbsp;
+				<a href="https://www.4399.com/" target="_blank">4399小游戏</a>&nbsp;
+				<a href="https://www.taobao.com/" target="_blank">淘宝网</a>&nbsp;
+			</p>
+		</div>
+		
+		<hr/ size="3" color="#000000" align="center" width="800">
+			
+		<div class="q5">
+			<p><a href="http://39.99.190.212/" target="_blank">原地tp</a></p>
+		</div>
+		
+		<hr/ size="3" color="#000000" align="center" width="800">
+			<p style="text-align: right; padding-right: 150px; line-height: 25px; color: #f27b44;">最后编辑于2020年05月07日下午<br>当前版本1.50</p>
+		<div class="music" align="center">
+			<p>当前播放<br>only my rilgun</p>
+		<audio src="img/only my rilgun.mp3" controls="controls">
+			当前浏览器不支持audio
+		</audio>
+		</div>
+		<!--  舍弃动画 @keyframes>
+		<!-- <div class="donghua" align="">
+			<div class="donghua1">
+				と
+			</div>
+			<div class="donghua2">
+				あ
+			</div>
+			<div class="donghua3">
+				る
+			</div>
+			<div class="donghua4">
+				科
+			</div>
+			<div class="donghua5">
+				学
+			</div>
+			<div class="donghua6">
+				の
+			</div>
+			<div class="donghua7">
+				超
+			</div>
+			<div class="donghua8">
+				電
+			</div>
+			<div class="donghua9">
+				磁
+			</div>
+			<div class="donghua10">
+				砲
+			</div>	
+		</div> -->
+		
+		
+		
+	</body>
+</html>
