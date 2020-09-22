@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title></title>
+		<style>
+			canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas width="500" height= "500"></canvas>
+		<script>
+			//获取绘图环境
+			let c2d = document.querySelector("canvas").getContext("2d");
+			//TODO
+			
+			//在（0,0）绘制一个100*100的矩形
+			c2d.fillRect(0,0,100,100);
+			
+			
+			
+			//在（250*250）绘制一个100*100的橙色矩形
+			c2d.fillStyle = 'orange'
+			c2d.fillRect(250,250,100,100)
+			
+			
+			/* //旋转绘图坐标系
+			c2d.rotate(45/180 * Math.PI);
+			c2d.fillStyle = 'pink';
+			c2d.fillRect(250,250,100,100); */
+			
+			
+			c2d.save();//保存画布临时状态
+			c2d.rotate(45/180 * Math.PI); //将绘图坐标顺时针旋转45度
+			c2d.fillStyle = "pink";
+			c2d.fillRect(250,250,100,100);
+			c2d.restore();//还原到最近的保存之前的状态
+			
+			c2d.translate(250,250);
+			c2d.rotate(45/180*Math.PI);
+			c2d.fillStyle = 'green';
+			c2d.fillRect(0,0,100,100);
+			
+			let r = 45;
+			//圆周运动
+			run();//执行函数run
+			
+			function run(){
+				c2d.clearRect(0,0,500,500); //清除画布
+				
+				c2d.rotate(r/180*Math.PI);
+				c2d.fillRect(0,0,100,100);
+				r++;
+				requestAnimationFrame(run);
+			}
+			
+		</script>
+	</body>
+</html>
