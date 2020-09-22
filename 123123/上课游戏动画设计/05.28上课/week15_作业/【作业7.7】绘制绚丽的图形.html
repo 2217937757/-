@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			canvas{border: 1px solid black;}
+		</style>
+	</head>
+	<body>
+		<canvas width="500" height="500"></canvas>
+		
+<script>
+//获取绘图环境 
+// var 声明一个变量(旧)
+// let 声明一个变量 ✔  
+let c2d  = document.querySelector("canvas").getContext("2d");
+
+c2d.translate(350,50);
+
+c2d.fillRect(255,0,0,0.25);
+
+run();
+function run(){
+	c2d.fillStyle = "#aa557f";
+	c2d.translate(50,60);
+	c2d.scale(0.95,0.95);
+	c2d.rotate( Math.PI / 10);
+	c2d.fillRect(0,0,60,100);
+	 r = 0;
+	 r < 50;
+	 r++;
+	c2d.restore();
+
+	requestAnimationFrame(run);
+}
+
+</script>	
+	</body>
+</html>
