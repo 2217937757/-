@@ -1,0 +1,104 @@
+/*将所有的距离，间距都设置为0*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: #F5F5F5 /*白烟色*/
+}
+/*设置页眉的位置*/
+.header{
+	width: 1200px;
+	margin: 25px auto; /*注意空格分开而不是逗号*/
+}
+/*设置菜单和logo位置*/
+.header .logo{
+	float: left;
+	position: relative;
+}
+/*超级链接去下划线*/
+a{
+	text-decoration: none;
+}
+.content{
+	/*响应式布局始终居中*/
+	width: 1200px;
+	margin: 25px auto;
+}
+/*图片距离*/
+.content .banner .banner_img{
+	margin-top: 20px;
+}
+/*整体图片横向布局*/
+.content .img_content ul{
+	width: 1280px;
+}
+.content .img_content ul li{
+	width: 360px;  /*360*3+120*/
+	float: left;
+	margin: 0 60px 60px 0; 
+	list-style: none;
+	background-color: #FFFFFF;
+	/*处理边框*/
+	margin-top: 30px;
+	height: 500px; /*列表边框*/
+
+}
+.content .img_content .info h3{
+	font-size: 25px;
+	color: red;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.footer{
+	width: 1200px;
+	height: 100px;
+	margin: 60px auto;
+	/*加一条上边框分割线*/
+	border-top:1px solid #ccc;
+	overflow: hidden; 
+}
+.footer p{
+	text-align: center;
+	line-height: 80px;
+}	
+.footer p span{
+	color: #ff1490;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

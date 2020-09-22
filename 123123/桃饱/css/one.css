@@ -1,0 +1,317 @@
+body {									/* 整局布置 */
+background-color: #f6f6f6;
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+font-size: 12px;
+color: #999999;
+text-decoration: none;	/* 去掉下划线 */
+}
+a:hover {
+color: #e33333;
+}
+.w {
+width: 1200px;
+margin: 0 auto;
+}
+
+/* 顶端部分 */
+header {
+width: 100%;
+height: 80px;
+background-color: #000000;
+}
+.hengtiao{				/* 横条 */
+	width: auto;
+	margin: 0 auto;
+}/* 结束 */
+
+
+/* 导航部分 */
+.zhengti {					/* 整体 */
+width: 100%;
+height: 30px;
+line-height: 30px;
+font-size: 12px;
+color: #999999;
+background-color: #e3e4e5;
+border-bottom: 1px solid #dddddd;
+}						
+.mianfeizhuce{				/* 免费注册 */
+	color: red;
+	margin-left: 20px;
+}																				
+.youfudon{					/* 右浮动 */
+	float: right;
+}
+.youfudon li{				/* 右浮动之后 左浮动进行调整 */
+	float: left;
+}
+.daohang {				
+margin-left: 200px;
+float: left;
+}			
+.lei {						/* 导航栏 分类 */
+width: 1px;
+height: 10px;
+background-color: #cccccc;
+margin: 10px 12px 0;
+}	/* 结束 */
+		
+
+/* 班级logo */
+.tubiao {
+height: 140px;
+position: relative;
+width: 1200px;
+margin: 0 auto;
+}
+.tubiao .chatu {
+position: absolute;
+left: -200px;
+top: 180px;
+}
+.tubiao .logo {
+position: absolute;
+top: -30px;
+left: 0;
+box-shadow: 0px -10px 10px rgba(0,0,0,0.3);
+}
+.logo a {
+display: block;
+width: 190px;
+height: 170px;
+background-color: #fff;
+}/* 结束 */
+
+
+/* 搜索部分 */
+.sousuo {						
+width: 550px;
+height: 35px;
+background-color: pink;
+position: absolute;
+top: 25px;
+left: 320px;
+}
+.sousuo input {
+width: 493px;
+height: 33px;
+border: 1px solid #f10215;
+font-size: 12px;
+padding-left: 5px;
+float: left;
+}
+.sousuo button {
+height: 35px;
+width: 50px;
+background-color: #f10215;
+float: left;
+}
+.sousuo button i {
+font-family: 'icomoon';
+font-style: normal;
+font-size: 18px;
+color: white;
+}	/* 搜索结束 */
+
+
+/* 购物车部分 */
+.gouwu {		
+width: 120px;
+height: 40px;
+line-height: 33px;
+border: 1px solid #e3e4e5;
+position: absolute;
+text-align: center;
+top: 25px;
+right: 95px;
+background-color: white;
+}
+.zi {		/* 字 调整	 */	
+	color: red;	
+	float: left;
+}
+.duiqi{			/* 左浮动对齐 */
+	float: left;
+}
+.gouwu i {
+color: #f10215;
+}
+.gouwu span {			/* 1号红点图标 */
+font-size: 12px;
+color: white;
+width: 15px;
+height: 15px;
+line-height: 15px;
+background-color: #f10215;
+border-radius: 50%;
+position: absolute;
+top: 4px;
+right:1px;
+
+}	/* 购物车部分结束 */
+
+
+/* 关键字部分 */
+.one {
+position: absolute;
+top:70px;
+left: 320px;
+}
+.one a {
+margin-right: 4px;
+}
+
+.two {
+width: 790px;
+height: 25px;
+position: absolute;
+bottom: 0;
+left: 200px;
+}
+.two ul li {
+float: left;
+margin-left: 30px;
+}
+
+.two li a {
+font-size: 14px;
+color: #555555;
+}
+.two a:hover {
+color: #f10215;
+}
+/* 结束 */
+
+
+/* 页脚部分 */
+footer {
+height: 1000px;
+background-color: #ffffff;
+margin-top: 40px;
+}
+footer .yulan {				/* 预览部分 */
+border-bottom: 1px solid #dedede;
+height: 400px;
+}
+.yulan ul {
+padding: 20px 0;
+}
+.yulan ul li {
+height: 60px;
+width: 290px;
+float: left;
+position: relative;
+}
+.yulan li h5 {
+width: 220px;
+height: 300px;
+position: absolute;		/* 绝对定位 */
+left: 1px;
+top: 0;
+}
+.yulan li:nth-child(2) h5 {
+
+background: url(../img/3..webp) no-repeat;
+}
+.yulan li:nth-child(3) h5 {
+
+background: url(../img/9.webp) no-repeat;
+}
+.yulan li:nth-child(4) h5 {
+
+background: url(../img/QQ图片20200603220104.jpg) no-repeat;
+}
+.yulan li:nth-child(5) h5 {
+
+background: url(../img/QQ图片20200603220031.jpg) no-repeat;
+}
+.yulan li p {
+padding-left: 80px;
+font-weight: bold;
+color: #444444;
+}		/* 结束 */
+
+
+/*帮助部分*/
+.help {
+width: 1200px;
+height: 200px;
+margin: 0 auto;
+border-bottom: 1px solid #dedede;
+padding-top: 26px;
+
+}
+.help dl {
+width: 194px;
+float: left;
+}
+.help dl dt {
+height: 25px;
+font-size: 14px;
+color: #666666;
+font-weight: 700;
+}
+.help dl dd {
+height: 21px;
+}	/* 结束 */
+
+
+/* 结束语部分 */
+.jieshuyu {
+width:200px;
+height:150px;
+background: url(../img/QQ图片20200603213845.png) no-repeat;
+float: left;
+}
+.jieshuyu h5 {
+height: 25px;
+color: #666666;
+font-size: 14px;
+font-weight: 10px;		
+padding-left: 60px;
+}
+.jieshuyu p {
+font-size: 12px;
+color: #666666;
+line-height: 18px;
+width: 180px;
+padding-left: 10px;
+}
+.jieshuyu a {
+display: block;
+margin-top: 5px;
+width: 180px;
+text-align: right;
+}	/* 结束 */
+
+
+
+/*版权*/
+.jiewei {				/* 结尾部分调整 */
+width: 1200px;
+margin: 0 auto;
+color: #666666;
+font-size: 12px;
+margin-top: 20px;
+text-align: center;
+}
+.jiewei div {
+margin-top: 17px;
+line-height: 20px;
+color: #999999;
+}
+.jiewei span {			/* 标签间距 */
+margin: 0 12px;
+}
+
+.lianjie a {
+display: inline-block;
+}
+

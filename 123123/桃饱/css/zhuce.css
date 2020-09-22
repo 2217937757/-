@@ -1,0 +1,58 @@
+			.qq{
+				text-align: center;
+				border: 5px dashed #68d1e1;
+				background-color: #ffffff;
+				width: 400px;
+				position: absolute;
+				left: 795px;
+				top: 300px;
+			}
+			#biaoti{
+				font-size: 30px;
+				font-family: '宋体';
+				
+			}
+			#denlu{
+				font-size: 20px;
+				display: inline-block;   /*行内块*/
+				font-family: '宋体';
+				text-decoration: none;			/*没有文本修饰*/
+				margin: 0 30px 0 30px;			/*登录/注册  间距*/
+				color: #0055ff;
+			}
+			#shouji{
+				border-radius: 5px;			/*圆角边框*/
+				border: 1px #ccc solid;		/*边框*/
+				padding: 10px 10px;			/*输入框高度*/
+				width: 270px;				/*输入框宽度*/
+				font-size: 14px;
+				margin: 30px 45px 0px 0px;
+			}
+			#yanzhengma{
+				border-radius: 5px;			/*圆角边框*/
+				border: 1px #ccc solid;		/*边框*/
+				padding: 10px 10px;			/*输入框高度*/
+				width: 160px;				/*输入框宽度*/
+				font-size: 14px;
+				margin: 30px 0px 0px -45px;
+			}
+			#huoquyzm{
+				padding: 7px;					/*输入框高度*/
+				width: 105px;					/*输入框宽度*/
+				margin: 30px 0px 0px 0px;		
+				border: 1px #0055FF solid;		/*边框*/
+				border-radius: 5px;				/*圆角边框*/
+			}
+			#gou{
+				margin: 30px 0px 0px 0px;
+			}
+			#kuaijiedenglu{
+				padding: 10px;					/*输入框高度*/
+				width: 210px;					/*输入框宽度*/
+				margin: 20px 30px 0px 0px;		
+				border: 1px #0055FF solid;		/*边框*/
+				border-radius: 5px;				/*圆角边框*/
+			}
+			#disanfang{
+				margin: 20px 0px 0px 0px;
+			}

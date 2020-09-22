@@ -1,0 +1,232 @@
+/*中间分类开始*/
+.gd {
+    height: 480px;
+	width: 1200px;
+	margin: 0 auto;
+}
+.gd-c1 {
+    width: 190px;
+    height: 100%;
+    background-color: #6e6568;
+    padding: 17px 0;
+    box-sizing: border-box;
+	
+	float: left;
+}
+.gd-c1 ul {
+    font-size: 12px;
+    color: #ffffff;
+}
+.gd-c1 ul li {
+    height: 28px;
+    line-height: 28px;
+    padding-left: 14px;
+}
+.gd-c1 ul li:hover {
+    background-color: #cccccc;
+}
+.gd-c1 span {
+    margin: 0 3px;
+}
+.gd-c1 a {
+    font-size: 14px;
+    color: #ffffff;
+}
+.gd-c1 a:hover {
+    color: #f10215;
+}
+
+				
+.gd-c2 {				/* 中间部分调整 */
+width: 790px;
+height: 100%;
+margin-left: 15px;
+float: left;
+}
+.gd-c2-shang {
+position: relative;
+}
+.zuobian, .youbian {
+width: 22px;
+height: 60px;
+background:rgba(0, 0, 0,0.2);
+position: absolute;
+top: 50%;
+line-height: 60px;
+font-size: 30px;
+color: rgba(0,0,0,0.);
+padding-left: 8px;
+}
+.zuobian {
+left: 0;
+}
+.youbian {
+right: 0;
+}
+.gd-c2-shang ul {
+width: 170px;
+height: 20px;
+background: rgba(255, 255,255,0.3);
+position: absolute;
+bottom: 10px;
+left: 50%;
+transform: translateX(-50%);
+border-radius: 10px;
+padding-left: 5px;
+}
+.gd-c2-shang ul li {
+height: 12px;
+width: 12px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.6);
+float: left;
+margin: 4px;
+cursor: pointer;
+}
+.gd-c2-shang .yuanxin {			/* 小圆心 */
+background-color: red;
+}
+.gd-c2-shang ul li:hover {
+background-color: #f10215;
+}
+.gd-c2-xia div {
+float: left;
+margin-top: 7px;
+}
+.gd-c2-xia div:nth-child(2) {
+float: right;
+}										/* 中间部分结束 */
+
+				
+.gd-c3 {							/* 登录部分 */
+width: 190px;
+height: 100%;
+background-color: #fff;
+float: right;
+}
+.you { 
+height: 115px;
+border-bottom: 1px solid #cccccc;
+padding: 15px;
+box-sizing: border-box;
+}
+.you-shang {		
+width: 95px;
+height: 55px;
+font-size: 12px;
+line-height: 18px;
+color: #666666;
+padding-left: 55px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+position: relative;
+}
+.you-shang a {
+color: #666666;
+}
+.you-shang a:hover { 
+color: #f10215;
+}								/* 登陆部分结束 */
+
+.touxiang {						/* 小头像部分 */
+width: 50px;
+height: 50px;
+position: absolute;
+left: 0;
+top: 0;
+}
+.touxiang img {
+width: 100%;
+}								/* 小头像部分结束 */
+
+.you-xia {						/* 右下部分调整 */
+margin-top: 5px;
+}
+.you-xia a {	
+font-size: 12px;
+color: #f10215;
+display: inline-block;
+width: 58px;
+height: 20px;
+line-height: 20px;
+border: 1px solid #f10215;
+padding-left: 12px;
+}								/* 右下结束 */
+					
+
+.gonggao {						/* 公告部分 */
+height: 154px;
+border-bottom: 1px solid #cccccc;
+padding: 7px 13px 0;
+box-sizing: border-box;
+}
+.gonggao-zuo {
+width: 160px;
+height: 19px;
+border-bottom: 1px solid #cccccc;
+position: relative;
+}
+.gonggao-zuo a {
+float: left;
+height: 17px;
+color: #333333;
+line-height: 17px;
+}
+.promotion {
+width: 38px;
+border-right: 1px solid #cccccc;
+}
+.gg {
+margin-left: 15px;
+}
+.gonggao-zuo .gengduo {
+float: right;
+}
+.gonggao-zuo div {
+width: 28px;
+height: 2px;
+background-color: #f10215;
+position: absolute;
+left:0;
+top: 18px;
+}
+.gonggao-you {
+height: 120px;
+padding-top: 19px;
+}
+.gonggao-you a {
+display: block;
+height: 23px;
+color: #666666;
+}							/* 公告部分结束 */
+
+
+.qita {						/* 其他部分调整	 */
+height: 250px;
+overflow: hidden;
+}
+.qita ul {
+width: 200px;
+}
+.qita ul li {
+width:63px;
+height:50px;
+float: left;
+border-right: 1px solid #cccccc;
+border-bottom: 1px solid #cccccc;
+}
+.qita li a {
+display: block;
+width: 30px;
+height: 30px;
+padding-top: 3px;
+padding-left: 10px;
+}
+.qita a div {
+width: 90px;
+height:	30px;
+background:url(../img/QQ图片20200603194029.png) no-repeat;
+}
+
+
