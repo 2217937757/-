@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>12清除浮动</title>
+		<style type="text/css">
+			.qqq{
+				text-align: center;
+			}
+			.q1{
+				width: 600px;
+				height: 140px;
+				background-color: #f3de83;
+				border: solid 1px #000000;
+			}
+			.h1{
+				font-size: 15px;
+				font-weight: bold;
+				width: 100px;
+				height: 60px;
+				line-height: 60px;
+				background-color: #daf6f7;
+				border: solid 1px #000000;
+				margin: 10px;
+				float: left;
+			}
+			.h2{
+				font-size: 15px;
+				font-weight: bold;
+				width: 130px;
+				height: 40px;
+				line-height: 40px;
+				background-color: #daf6f7;
+				border: solid 1px #000000;
+				margin: 10px;
+				float: left;
+			}
+			.h3{
+				font-size: 15px;
+				font-weight: bold;
+				width: 170px;
+				height: 40px;
+				line-height: 40px;
+				background-color: #daf6f7;
+				border: solid 1px #000000;
+				margin: 10px;
+				float: right;
+			}
+			.h4{
+				font-size: 15px;
+				font-weight: bold;
+				width: 280px;
+				height: 50px;
+				line-height: 10px;
+				background-color: #f9aa9d;
+				border: dashed 2px #000000;
+				margin-top: 30px;
+			}
+			.q2{
+				width: 600px;
+				height: 140px;
+				background-color: #f3de83;
+				border: solid 1px #000000;
+				margin-top: 30px;
+			}
+			.q3{
+				width: 600px;
+				height: 140px;
+				background-color: #f3de83;
+				border: solid 1px #000000;
+				margin-top: 30px;
+			}
+			.hh4{
+				font-size: 15px;
+				font-weight: bold;
+				width: 280px;
+				height: 50px;
+				line-height: 50px;
+				background-color: #f9aa9d;
+				border: dashed 2px #000000;
+				margin-top: 80px;
+				float: none;
+			}
+			.q4{
+				width: 600px;
+				height: 140px;
+				background-color: #f3de83;
+				border: solid 1px #000000;
+				margin-top: 30px;
+			}
+			#pp{
+				text-align: left;
+				float: none;
+				margin-top: 84px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="qqq">
+			<div class="q1">
+				<div class="h1">
+					H1左浮动
+				</div>
+				<div class="h2">
+					H2左浮动
+				</div>
+				<div class="h3">
+					H3右浮动
+				</div>
+				<div class="h4">
+					H4不浮动
+				</div>
+			</div>
+			
+			<div class="q2">
+				<div class="h1">
+					H1左浮动
+				</div>
+				<div class="h2">
+					H2左浮动
+				</div>
+				<div class="h3">
+					H3右浮动
+				</div>
+				<p style="text-align: left;">
+					段落文字 ，不浮动 ，不清除浮动时效果 。
+					段落文字 ，不浮动 ，不清除浮动时效果 。
+					段落文字 ，不浮动 ，不清除浮动时效果 。
+					段落文字 ，不浮动 ，不清除浮动时效果 。
+				</p>
+			</div>
+			
+			<div class="q3">
+				<div class="h1">
+					H1左浮动
+				</div>
+				<div class="h2">
+					H2左浮动
+				</div>
+				<div class="h3">
+					H3右浮动
+				</div>
+				<div class="hh4">
+					H4不浮动 ,清除两侧浮动
+				</div>
+			</div>
+			
+			<div class="q4">
+				<div class="h1">
+					H1左浮动
+				</div>
+				<div class="h2">
+					H2左浮动
+				</div>
+				<div class="h3">
+					H3右浮动
+				</div>
+				<p id="pp">
+					段落文字 ，不浮动 ，清除左右两侧浮动时效果 。
+					段落文字 ，不浮动 ，清除左右两侧浮动时效果 。
+					段落文字 ，不浮动 ，清除左右两侧浮动时效果 。
+					段落文字 ，不浮动 ，清除左右两侧浮动时效果 。
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

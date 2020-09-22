@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>11可见性</title>
+		<style type="text/css">
+			.q1{
+				width: 220px;
+				height: 90px;
+				border: 3px dashed #000000;
+				color: #FFFFFF;
+				line-height: 80px;
+				text-align: center;
+				background-color: #ba9578;
+				margin-bottom: 50px;
+			}
+			.q2{
+				width: 210px;
+				height: 100px;
+				border: 3px dashed;
+				text-align: center;
+				background-color: #70c17f;
+				padding-left: 10px;
+				padding-top: 10px;
+			}
+			#q01{
+				display: none;/*隐藏后不占空间*/
+			}
+			#q02{
+				visibility: hidden;/*隐藏后占空间*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="q1">
+			显示
+		</div>
+		<div class="q2">
+			<table border="1">
+				<tr>
+					<td>单元格1</td>
+					<td>单元格2</td>
+					<td>单元格3</td>
+				</tr>
+				<tr>
+					<td id="q01">单元格4</td>
+					<td id="q01">单元格5</td>
+					<td id="q01">单元格6</td>
+				</tr>
+				<tr>
+					<td id="q02">单元格7</td>
+					<td>单元格8</td>
+					<td>单元格9</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

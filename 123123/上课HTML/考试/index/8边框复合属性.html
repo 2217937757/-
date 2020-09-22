@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>8边框复合属性</title>
+		<style type="text/css">
+			.q1{
+				width: 130px;
+				height: 80px;
+				border: #139dd7 3px solid;
+				color: #139dd7;
+				float: left;/* 左浮动 */
+			}
+			.q2{
+				width: 130px;
+				height: 80px;
+				border: #81409A 3px double;/*双线*/
+				color: #81409A;
+				float: left;/* 左浮动 */
+				margin-left: 30px;
+			}
+			.q3{
+				width: 130px;
+				height: 80px;
+				border: #047C3F 6px dashed;/*虚线*/
+				color: #139dd7;
+				float: left;/* 左浮动 */
+				margin-left: 30px;
+			}
+			.q4{
+				width: 130px;
+				height: 80px;
+				border-top: double 3px #000000;/* 上 双线 */
+				border-bottom: dotted 3px #000000;/* 下 点线*/
+				border-left: groove 8px #b7d3ef;/* 左 3d实线 */
+				border-right: solid 3px #b6ce44;/* 右 实线*/
+				float: left;/* 左浮动 */
+				margin-left: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="q1">
+			border:solid , 边框颜色默认使用前景色
+		</div>
+		<div class="q2">
+			border:double
+			#81409A;
+		</div>
+		<div class="q3">
+			border:dashed
+			#047C3F 6px;
+		</div>
+		<div class="q4">
+			4个边分别设置
+		</div>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+				background-color: #34495e;
+				display: flex;						/* 弹性盒子 */
+				justify-content: center;			/* 主轴对齐 居中 */
+				align-items: center;				/* 交叉轴对齐 居中 */
+				margin: 200px auto;
+			}
+			.qq{
+				width: 200px;
+				height: 200px;
+				box-sizing: border-box;				/* 盒子适应 */
+				position: relative;					/* 相对定位 */
+				border-top: 20px solid #e74c3c;
+				border-radius: 50%;					/* 圆角边框 */
+				animation: q1 2s linear infinite;	/* 无限循环 */
+			}
+			.qq::before , .qq::after{
+				content: "";
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: -20px;
+				left: 0px;
+				box-sizing: border-box;
+				border-radius: 50%;
+			}
+			.qq::before{
+				border-top: 20px solid #E67E22;
+				transform: rotate(120deg);
+			}
+			.qq::after{
+				border-top: 20px solid #0000FF;
+				transform: rotate(240deg);
+			}
+			.qq span{
+				width: 200px;
+				height: 200px;
+				color: #FFFFFF;
+				line-height: 200px;
+				text-align: center;
+				position: absolute;
+				animation: q2 2s linear infinite;
+				font-size: 20px;
+			}
+			@keyframes q1{
+				to{transform: rotate(360deg);}
+			}
+			@keyframes q2{
+				to{transform: rotate(-360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="qq">
+			<span>Loading...</span>
+		</div>
+	</body>
+</html>

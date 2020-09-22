@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background: #34495e;
+				margin: 0;
+				padding: 0;
+				font-family: "微软雅黑";
+			}
+			.qq{
+				width: 400px;
+				height: 400px;
+				border-radius: 50%;							/* 圆角边框  圆弧*/
+				border-top: 20px solid #e7473c;				/* 只有上边框 */
+				animation: qq1 2s linear infinite;			/* 执行qq1的动画 2s 线性无限循环 */
+			}
+			.qq:before,.qq:after{							/* 在 ..之前 ..之后插入 */
+				content: "";								/* 伪元素 */
+				position: absolute;							/* 绝对定位 */
+				left: 0;
+				top: -20px;
+				width: 400px;
+				height: 400px;
+				border-radius: 50%;
+				
+			}
+			.qq:before{
+				border-top: 20px solid #e67e22;
+				transform: rotate(120deg);					/* 旋转 */
+			}
+			.qq:after{
+				border-top: 20px solid #3498db;
+				transform: rotate(240deg);
+			}
+			.qq span{
+				position: absolute;
+				width: 400px;
+				height: 400px;
+				text-align: center;
+				line-height: 400px;
+				color: #fff;
+				animation: qq2 2s linear infinite;
+				font-size: 30px;
+			}
+
+			@keyframes qq1{
+				to{
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes qq2{
+				to{
+					transform: rotate(-360deg);
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="qq">
+			<span>loading...</span>
+		</div>
+	</body>
+</html>
