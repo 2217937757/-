@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			#canvas{
+				border: 1px solid black;
+				margin: 50px auto; /* 上下50px 水平居中 */
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="1024" height="768" ></canvas>
+		
+<!-- 引入你的JS文件 -->
+<script src="js/digit.js"></script>
+
+<script>
+let WINDOW_WIDTH = 1024	//设置画布的宽度
+let WINDOW_HEIGHT = 768 //设置画布的高度
+let RADIUS = 8  //设置数字小球的半径
+
+//当整个页面加载完成 去执行 
+window.onload = function(){
+	let canvas = document.querySelector("#canvas")
+	//获取绘图环境 视频用的 context
+	c2d  = canvas.getContext("2d") 
+	
+	canvas.width = WINDOW_WIDTH
+	canvas.heigth  = WINDOW_HEIGHT
+	
+	render(c2d)  //调用函数 
+	
+}
+
+function render(c2d){ //自定义函数
+	let h = 12	//小时
+	let m = 34	//分钟
+	let s = 56  //秒
+	
+	//renderDigit(x , y ,num, c2d)  //调用函数
+	renderDigit(0 , 0 ,parseInt(h/10), c2d)
+}
+
+function renderDigit(x , y ,num, c2d){ //自定义函数-绘制一个数字
+	c2d.fillStyle ="red" //设置填充颜色
+	
+	//利用双重循环 去绘制数字
+	for(let i=0; i< digit[num].length ;i++){ 
+		for(let j=0; j< digit[num][i].length ;j++){
+			if(digit[num][i][j] == 1){
+				c2d.beginPath()
+				//待补充 c2d.arc()
+				
+				let temp = RADIUS+1 
+				let _x = x + j * 2 * temp + temp
+				let _y = y + i * 2 * temp + temp
+				
+				c2d.arc(_x,_y,RADIUS,0,2*Math.PI)
+				
+				c2d.closePath()
+				
+				c2d.fill()
+			}//end if
+			
+		} //end for
+	}//end for
+	
+	
+}//end renderDigit
+
+
+	
+</script>
+
+
+
+
+		
+	</body>
+</html>

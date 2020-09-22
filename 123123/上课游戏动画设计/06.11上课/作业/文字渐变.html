@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+		<canvas id="canvas" width="270px" height="150px" style="border: dashed 1px #000000;"></canvas>
+
+		<script>
+			let c2d =  document.querySelector("#canvas").getContext("2d");
+			
+			run();
+			function run(){
+				
+				var text = "绿叶学习网";
+				c2d . font = "bold 50px 微软雅黑";
+				
+				var gnt = c2d . createLinearGradient(0,0,200,150);
+				gnt . addColorStop(0,"#ff00ff");
+				gnt . addColorStop(1,"#55ffff");
+				
+				c2d . fillStyle = gnt;
+				c2d . fillText(text,10,90);
+			}
+		</script>
+		
+</body>
+</html>

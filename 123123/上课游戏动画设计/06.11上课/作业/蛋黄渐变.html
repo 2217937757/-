@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+		<canvas id="canvas" width="270px" height="150px" style="border: dashed 1px #000000;"></canvas>
+
+		<script>
+			let c2d =  document.querySelector("#canvas").getContext("2d");
+			
+			run();
+			function run(){
+				
+				//画圆
+				c2d . beginPath();
+				c2d . arc(80,80,50,0,Math.PI*2,true);
+				c2d . closePath();
+				
+				//渐变
+				var gnt = c2d . createRadialGradient(100,60,10,80,80,50);		/* (圆心坐标1x,圆心坐标1y,圆心2x,圆心2y,半径) */
+				gnt . addColorStop(0,"#ffffff");
+				gnt . addColorStop(0.9,"#ffaa00");
+				gnt . addColorStop(1,"rgba(0,0,0,0)");
+				
+				//填充
+				c2d . fillStyle = gnt;
+				c2d . fill();
+			}
+		</script>
+		
+</body>
+</html>
