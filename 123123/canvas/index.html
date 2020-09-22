@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>canvas</title>
+		<style type="text/css">
+			.qq{
+				height: 1100px;
+				background: url(img/背景2.jpg);
+				background-repeat: no-repeat;
+				margin:0 auto;
+			}
+			.aa{
+				width: 300px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 500px;
+				top: 400px;
+			}
+			.q1{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 300px;
+				top: 30px;
+			}
+			.q2{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 230px;
+				top: 50px;
+			}.q3{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 135px;
+				top: 70px;
+			}
+			.q4{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 80px;
+				top: 300px;
+			}
+			.q5{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 120px;
+				top: 320px;
+			}
+			.q6{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 150px;
+				top: 340px;
+			}
+			.q7{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 190px;
+				top: 360px;
+			}
+			.q8{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 190px;
+				top: 380px;
+			}
+			.q9{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 725px;
+				top: -370px;
+			}
+			.q10{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 740px;
+				top: -350px;
+			}
+			.q11{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 740px;
+				top: -330px;
+			}
+			.q12{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 680px;
+				top: -310px;
+			}
+			.q13{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 630px;
+				top: -290px;
+			}
+			.q14{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: aliceblue;
+				position:relative;/*相对定位*/
+				left: 630px;
+				top: -270px;
+			}
+			a:hover{         /*鼠标经过悬停的状态*/
+				color: #000000;
+				text-decoration:none
+			}
+		</style>
+	</head>
+	<body>
+		<div class="qq">
+			<div class="q1">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//0/" target="_blank">第一周作业</a>
+			</div>
+			<div class="q2">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//02.27上课/" target="_blank">第二周作业</a>
+			</div>
+			<div class="q3">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//03.05上课/" target="_blank">第三周作业</a>
+			</div>
+			<div class="q4">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//03.12上课/《canvas》第四周作业/" target="_blank">第四周作业</a>
+			</div>
+			<div class="q5">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//03.19上课/作业/" target="_blank">第五周作业</a>
+			</div>
+			<div class="q6">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//03.26上课/21需要补充数据/" target="_blank">第六周作业</a>
+			</div>
+			<div class="q7">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//04.01上课/第7周_随机点名和谁掉队了/" target="_blank">第七周作业</a>
+			</div>
+			<div class="q8">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//04.09上课/第八周_canvas21/" target="_blank">第八周作业</a>
+			</div>
+			<div class="q9">
+				<a href="http://2217937757.github.io/XIAO/" target="_blank">第九周作业</a>
+			</div>
+			<div class="q10">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//04.23上课/" target="_blank">第十周作业</a>
+			</div>
+			<div class="q11">
+				<a href="http://2217937757.github.io/XIAO/" target="_blank">第十一周作业</a>
+			</div>
+			<div class="q12">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//05.07上课/" target="_blank">第十二周作业</a>
+			</div>
+			<div class="q13">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//05.14上课/作业/" target="_blank">第十三周作业</a>
+			</div>
+			<div class="q14">
+				<a href="http://2217937757.github.io/XIAO/123123/上课游戏动画设计//05.21上课" target="_blank">第十四周作业</a>
+			</div>
+			<div class="aa">
+				<p style="text-align: right;  line-height: 25px; color: #e1a796;">最后编辑于2020年05月07日下午<br>当前版本1.30</p>
+			</div>
+		</div>
+	</body>
+</html>
