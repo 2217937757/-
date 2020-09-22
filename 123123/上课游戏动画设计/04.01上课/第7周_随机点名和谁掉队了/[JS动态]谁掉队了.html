@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/2.css"/>
+		
+	</head>
+	<body>
+		<div id="bj2" class="c" ></div>
+		<div id="bj4" class="c" ></div>
+
+<textarea id="t" rows="10" cols="80" placeholder="请输入需要分析的数据.."></textarea>
+<button id="btn">开始数据分析</button>
+
+		
+
+<script src="js/stu4.js"></script>
+<script src="js/stu2.js"></script>
+<script>
+let t = document.querySelector("#t");
+let btn = document.querySelector("#btn");
+let bj2 = document.querySelector("#bj2");
+let bj4 = document.querySelector("#bj4");
+
+btn.onclick = function(){
+	
+	let text = t.value;//获取我们学生回答的字符串 text
+	
+	tellMe(bj2,"二班",text,stu2);
+	tellMe(bj4,"四班",text,stu4);
+	
+}
+
+
+//判断活跃
+function tellMe(obj,bjm,text,stu){
+	let aArr = []; //存放活跃同学的名单
+	let cArr = [];//存放不活跃同学的名单
+
+	//在我们花名册里去判断是否在 text中
+	for(let i=0;i<stu.length ;i++ ){
+		let name = stu[i].name;//获取每一个同学姓名
+		
+		if( text.search(name) >0 ){ //找到这个同学啦
+			aArr.push(name);
+		}else{
+			cArr.push(name);
+		}
+	}
+	
+	
+	console.log(aArr); //在控制台显示
+	console.log(cArr); //在控制台显示
+	show(obj,bjm,aArr,cArr);
+}
+
+//负责显示在页面上
+function show(obj,bjm,aArr,cArr){
+	let html = ``;
+	
+	let aLi = ``;//<li>刘备</li><li>赵云</li>
+	let aList = ``;//刘备,赵云,关羽
+	
+	let cLi = ``;//<li>张飞</li>
+	let cList = ``;//张飞
+	
+	for(let name of aArr){
+		aLi+= `<li>${name}</li>`;
+		aList+=`${name},`;
+	}
+	
+	for(let name of cArr){
+		cLi+= `<li>${name}</li>`;
+		cList+=`${name},`;
+	}
+
+	html=`
+		<h2>${bjm}</h2>
+		<div class="box">
+			<section>${aArr.length}人</section>
+			<ul>
+				${aLi}
+			</ul>
+			<div>
+				<span class="t">汇总名单(活跃):</span>
+				<span class="list">${aList}</span>
+			</div>
+		</div>
+		
+		<div class="box no">
+			<section>${cArr.length}人</section>
+			<ul>
+				${cLi}
+			</ul>
+			<div>
+				<span class="t">汇总名单(不活跃):</span>
+				<span class="list">${cList}</span>
+			</div>
+		</div>
+	`;
+	
+
+	obj.innerHTML = html;
+}
+
+
+
+
+</script>
+
+		
+		
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>模拟表格</title>
+		<link rel="stylesheet" type="text/css" href="css/1.css"/>
+	</head>
+	<body>
+	
+	<div id="textBox">
+		<div>
+			第1节课：
+			<textarea rows="" cols=""></textarea>
+		</div>
+		<div>
+			第2节课：
+			<textarea rows="" cols=""></textarea>
+		</div>
+		<div>
+			第3节课：
+			<textarea rows="" cols=""></textarea>
+		</div>
+		<div>
+			第4节课：
+			<textarea rows="" cols=""></textarea>
+		</div>
+		<div>
+			第5节课：
+			<textarea rows="" cols=""></textarea>
+		</div>
+	</div>
+	
+	<button id="btn">数据分析</button>
+	
+	<main id="mBox">
+		<!---动态生成 --->
+		<div class="one">
+			<h1>姓名</h1>
+			<div>✔</div>
+			<div>✔</div>
+			<div>✔</div>
+			<div>✔</div>
+		</div>
+		<!---动态生成 --->
+	</main>	
+	
+<script src="js/stu12.js"></script>
+<script>
+
+// 问题1 div class残留
+//	
+	
+	
+//第一步 动态生成 表格
+let mBox = document.querySelector("#mBox");
+let html = ``;
+// TO DO 
+for(let name of stux){
+	
+	let oneDiv = `
+<div id="${name}" class="one">
+	<h1>${name}</h1>
+	<div ></div>
+	<div ></div>
+	<div ></div>
+	<div ></div>
+	<div ></div>
+</div>
+	`;
+	html+=oneDiv;
+}
+mBox.innerHTML  = html;
+
+//第二步 获取用户输入的数据 
+let dataArr = [];//存放所有课的用户数据
+let btn  =document.querySelector("#btn");
+let textareaArr = document.querySelectorAll("#textBox textarea");
+
+btn.onclick = function(){ //点击按钮时执行功能
+	
+	//TO DO需要做一些页面显示清理
+	
+	dataArr = [];//TO DO 重置数组
+	
+	//获取输入框的值
+	for(let t of textareaArr){ //获取每一个输入框对象
+		let v = t.value;//获取输入框的值
+		if(v.length>1){ //如果输入框有内容
+			dataArr.push(v); //将文本框的值放入数组dataArr
+		}
+		
+	}
+	console.log(dataArr);
+	
+	matchAndShow(dataArr);
+	
+}//点击事件的结束
+
+//第三步 匹配数据并显示 根据班级名单 去寻找签到记录
+//1对n的关系 1份名单 n节课  
+//先找出一个同学的姓名 根据姓名 去n节课的听课纪录里面找
+function matchAndShow(dataArr){
+	
+	for(let name of stux){
+		let id = name; //id="姓名" 包含的div  "#孙红露 div"
+		let divArr = document.querySelectorAll(`#${name} div`);
+		for(let i =0; i<dataArr.length; i++){ //
+			let 签到记录 = dataArr[i];//一节课的 签到记录
+			
+			if( 签到记录.search(name) >=0){ //找到这个同学
+				//确定了i 
+				console.log(签到记录);
+				console.log(签到记录.search(name));
+				divArr[i].innerHTML = "✔";
+			}else{
+				divArr[i].style.backgroundColor = "pink";
+			}
+			
+		}
+	}
+}// show
+
+
+
+
+
+
+	
+	
+</script>
+
+
+		
+	</body>
+</html>

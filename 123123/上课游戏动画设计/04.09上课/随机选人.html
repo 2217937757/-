@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#my{}
+			#my span{
+				border: 1px solid black;
+				padding: 5px;
+				display: inline-block;
+			}
+			.pick{
+				background-color: gold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="my"> 
+		<span class="pick">姓名</span>
+		<span>姓名</span>
+		</div>
+		
+			<script src="http://122.51.248.197/data/stu12.js"></script>
+			<script>
+			let my = document . querySelector("#my");
+			//元素. innerHTML表示它所包含的HTML代码
+			//alert(my.innerHTML);
+			let html =``; //tab键上方``  可以插入变量 `你叫${name}今天很棒`
+			for(let name of stux){
+				html+=`<span>${name}</span>`;
+			}
+			my.innerHTML = html;//将生成的html赋值
+			
+			//innerHTML
+			//随机选人classlist    属性元素的class列表
+			//classlist.add("pick")添加元素的 class="pick"
+			//classList. remove("pick")删除元素的class="pick'
+			//classList . contains("pick")判断元素是否包含class="pick"
+			//获取页面所有的id="my"里面的span元素
+			let spanArr = document.querySelectorAll("#my span");
+			//获取一个随机数0~89
+			//alert( spanArr[0] . innerHTML );
+			//alert( spanArr[89]. innerHTML );
+			let n = Math.random() * 90; //或者* spanArr . length
+			// Math. random() 0~1的小数
+			// Math. random()*90 0~90的小数
+			n = parseInt(n);// [0,90)之间的正数 取整丟掉小數
+			spanArr[n].classList.add("pick");
+
+			</script>
+	</body>
+</html>

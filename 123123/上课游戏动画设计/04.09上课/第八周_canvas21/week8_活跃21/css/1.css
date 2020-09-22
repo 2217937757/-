@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+main{
+	margin: 10px;
+	width:980px ;
+}
+
+
+.one{
+	display: flex;
+}
+
+.one h1,.one div{
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid black;
+	padding: 5px;
+	text-align: center;
+}
+
+/*  设置文本域宽高 */
+#textBox textarea{
+	height: 60px;
+}
+
+.no{
+	background-color: green;
+}

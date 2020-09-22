@@ -1,0 +1,48 @@
+
+ <!DOCTYPE html>
+ <html>
+ 	<head>
+ 		<meta charset="utf-8" />
+ 		<title></title>
+ 		<style type="text/css">
+ 			#show{
+ 				width:100px ;
+ 				height: 100px;
+ 				border:1px solid #000000 ;
+ 			}
+ 		</style>
+ 	</head>
+ 	<body>
+ 		<div id="show"></div>
+ 		
+ 		<button>red</button>
+ 		<button>pink</button>
+ 		<button>blue</button>
+ 		<button>orange</button>
+ 		<button>green</button>
+ 		<button>black</button>
+ 		<button>#567844</button>
+ 		<button>#786576</button>
+ 		<script>
+ 			let show = document.querySelector("#show");
+ 			let btnArr = document.querySelectorAll("button");
+ 			
+ 			//HTML元素
+ 			//属性 innerHTML 包含的HTML内容
+ 			/*
+ 			循环 
+ 			for(初始化语句；循环条件；累加器){
+ 				循环体
+ 				}
+ 				*/
+ 			   //btnArr.length==8
+ 			   for(let i=0; i<btnArr.length; i++){
+ 				   let btn = btnArr[i];
+ 				   btn.onclick= function(){
+ 					   show.style.backgroundColor = this.innerHTML;
+ 				   }
+ 			   }
+ 		
+ 		</script>
+ 	</body>
+ </html>

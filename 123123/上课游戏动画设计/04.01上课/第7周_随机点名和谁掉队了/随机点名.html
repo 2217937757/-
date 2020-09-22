@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+				border: 1px solid black;
+			}
+			button{
+				font-size: 50px;
+				padding: 0 50px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="600" height="300"></canvas>
+		
+		<br>
+		<button id="btn">选人</button>
+
+
+<script src="js/stu4.js"></script>
+<script src="js/stu2.js"></script>
+<script>
+//获取Canvas对象
+let c2d = document.querySelector("#canvas").getContext("2d");
+//获取按钮对象
+let btn = document.querySelector("#btn");
+
+c2d.font = "bold 20px 微软雅黑"; //设置字体 粗细 大小 样式
+//获取按钮对象
+
+//按钮对象 监听鼠标点击事件 
+btn.onclick =function(){ //当鼠标点击按钮时
+	
+	//清除画布
+	c2d.clearRect(0,0,600,300);
+	
+	
+	//TO DO 随机获取姓名
+	c2d.fillText('4班：',30,30);
+	let t4 = getStuName(stu4,5);// 随机获取5个同学姓名的文本
+	c2d.fillText(t4,50,60); //绘制4班同学姓名
+	
+	c2d.fillText('2班:',30,130);
+	let t2 = getStuName(stu2,5);
+	c2d.fillText(t2,50,160); //绘制4班同学姓名
+	
+}
+
+//函数功能
+function getStuName(stu,n){
+	let t = '';
+	
+	for(let i=0;i<n;i++ ){
+		
+		let num = parseInt(Math.random()*stu.length) ;
+		let name = stu[num].name; //获取学生姓名
+		t+=' '+name;
+	}
+	
+	return t;
+}
+
+
+</script>
+
+		
+		
+	</body>
+</html>

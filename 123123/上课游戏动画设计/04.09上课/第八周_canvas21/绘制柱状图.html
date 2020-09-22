@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="300"></canvas>
+
+<script>
+let c2d = document.querySelector("#canvas").getContext("2d");
+
+// 
+
+c2d.moveTo(0,200);
+c2d.lineTo(300,200);
+c2d.stroke();
+
+// 180  140   |  150   160  |  130  120
+//fillRect(x坐标，y坐标，宽度，高度)
+let h = 200;
+
+//c2d.fillStyle="red";
+//c2d.fillRect(30,h-180,20,180);
+draw("red",30,180);
+draw("blue",50,140);
+
+draw("red",30+50,150);
+draw("blue",50+50,160);
+
+draw("red",30+100,130);
+draw("blue",50+100,120);
+
+draw("orange",30+150,190);
+draw("green",50+150,110);
+
+function draw(color,x,setH){
+	c2d.fillStyle=color;
+	c2d.fillRect(x,h-setH,20,setH);
+}
+
+
+	
+</script>
+
+	</body>
+</html>

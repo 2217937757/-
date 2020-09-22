@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+				background-color: #E1E1E1;
+				}
+		</style>
+	</head>
+	<body>
+		<p>
+		第一节课
+		二班在线 31个人
+		二班不在线 17个人
+		二班一共 45个人
+		（上面第一个图绿色表示不在线，蓝色表示在线）
+		四班在线 26人
+		四班不在线 21人
+		四班一共 47人 
+		（下面第一个图绿色表示不在线，蓝色表示在线）
+		</p>
+		<p>
+		第二节课
+		二班在线 39个人
+		二班不在线 6个人
+		二班一共 45个人
+		（上面第二个图绿色表示不在线，蓝色表示在线）
+		四班在线 33人
+		四班不在线 14人
+		四班一共 47人
+		（下面第二个图绿色表示不在线，蓝色表示在线）
+		</p>
+		<p>
+		第三节课
+		二班在线 38个人
+		二班不在线 7个人
+		二班一共 45个人
+		（上面第三个图绿色表示不在线，蓝色表示在线）
+		四班在线 31人
+		四班不在线 16人
+		四班一共 47人
+		（下面第三个图绿色表示不在线，蓝色表示在线）
+		</p>
+		
+		<canvas id="canvas" width="1600" height="800"></canvas>
+		<script>
+			//调用方法
+			let c2d = document.querySelector("#canvas").getContext("2d");
+			
+			//第一节课二班
+			// arc (圆心x，圆心y，半径，起始角，结束角，绘制的方向)
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="green";
+			c2d.arc(200,200,100,0,Math.PI*2);
+			c2d.fill();
+			
+			//在线  31/45
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#199db1";
+			c2d.moveTo(200,200);//移动到圆心  起始点
+			c2d.arc(200,200,100,0,31/45*Math.PI*2);
+			c2d.fill();
+			
+			//第二节课二班
+			// arc (圆心x，圆心y，半径，起始角，结束角，绘制的方向)
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="green";
+			c2d.arc(600,200,100,0,Math.PI*2);
+			c2d.fill();
+			
+			//在线  39/45
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#199db1";
+			c2d.moveTo(600,200);//移动到圆心  起始点
+			c2d.arc(600,200,100,0,39/45*Math.PI*2);
+			c2d.fill();
+			
+			//第三节课二班
+			// arc (圆心x，圆心y，半径，起始角，结束角，绘制的方向)
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="green";
+			c2d.arc(1000,200,100,0,Math.PI*2);
+			c2d.fill();
+			
+			//在线  38/45
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#199db1";
+			c2d.moveTo(1000,200);//移动到圆心  起始点
+			c2d.arc(1000,200,100,0,38/45*Math.PI*2);
+			c2d.fill();
+			
+			//第一节课四班
+			// arc (圆心x，圆心y，半径，起始角，结束角，绘制的方向)
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="green";
+			c2d.arc(200,600,100,0,Math.PI*2);
+			c2d.fill();
+			
+			//在线  26/47
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#199db1";
+			c2d.moveTo(200,600);//移动到圆心  起始点
+			c2d.arc(200,600,100,0,26/47*Math.PI*2);
+			c2d.fill();
+			
+			//第二节课四班
+			// arc (圆心x，圆心y，半径，起始角，结束角，绘制的方向)
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="green";
+			c2d.arc(600,600,100,0,Math.PI*2);
+			c2d.fill();
+			
+			//在线  33/47
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#199db1";
+			c2d.moveTo(600,600);//移动到圆心  起始点
+			c2d.arc(600,600,100,0,33/47*Math.PI*2);
+			c2d.fill();
+			
+			//第三节课四班
+			// arc (圆心x，圆心y，半径，起始角，结束角，绘制的方向)
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="green";
+			c2d.arc(1000,600,100,0,Math.PI*2);
+			c2d.fill();
+			
+			//在线  31/47
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#199db1";
+			c2d.moveTo(1000,600);//移动到圆心  起始点
+			c2d.arc(1000,600,100,0,31/47*Math.PI*2);
+			c2d.fill();
+		</script>
+	</body>
+</html>

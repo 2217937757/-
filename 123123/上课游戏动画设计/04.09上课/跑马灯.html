@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#my{}
+			#my span{
+				border: 1px solid black;
+				padding: 5px;
+				display: inline-block;
+			}
+			.pick{
+				background-color: #5555ff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="my"> 
+		<span class="pick">姓名</span>
+		<span>姓名</span>
+		</div>
+		
+			<script src="http://122.51.248.197/data/stu12.js"></script>
+			<script>
+			let my = document . querySelector("#my");
+			//元素. innerHTML表示它所包含的HTML代码
+			//alert(my.innerHTML);
+			let html =``; //tab键上方``  可以插入变量 `你叫${name}今天很棒`
+			for(let name of stux){
+				html+=`<span>${name}</span>`;
+			}
+			my.innerHTML = html;//将生成的html赋值
+			
+			
+			
+			//classList. add("pick") 添加元素的class="pick"
+			//classList. remove("pick" )删除元素的class=" pick"
+			//classList . contains("pick") 判断元素是否包含class="pick"
+			//定时器函数setInterval(函数，时间) 时间单位是毫秒 1000 =1秒
+			//举例setInterval(function(){},1000) 每隔1秒钟执行我们
+			let spanArr = document.querySelectorAll("#my span");
+			let n = 0;
+			setInterval(run,100); //每隔0.1秒执行run函数
+			
+			function run(){
+			//如果有了class="pick"删除掉，
+			//如果没有就添加class="pick"
+			if( spanArr[n].classList.contains("pick") ){
+				spanArr[n].classList.remove("pick");
+			}else{
+			spanArr[n].classList.add("pick");
+			}
+
+			n++;//n=n+1
+				if(n == spanArr.length ){//当n为溢出的下标 90
+					n = 0;
+				}
+			}
+
+
+			</script>
+	</body>
+</html>
