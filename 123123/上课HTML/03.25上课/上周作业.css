@@ -1,0 +1,57 @@
+/*删除浏览器的默认样式*/
+*{
+	list-style: none;/*列表格式为none*/
+	ontline: none;/*绘制于元素周围的线条无效*/
+}
+/*全局控制*/
+body{
+	font-family: "微软雅黑";
+	text-align: center;
+}
+h2{
+	font-size: 26px:
+	color: black:
+}
+a{
+	font-size: 22px;
+	color: #aa5500;
+	text-indent: 1em;/*文本缩进*/
+	display: inline-block;/*行内块*/
+}
+a:nth-child(1){
+	text-indent: 0;/*调整第一个a的位置*/
+}
+a:link,a:visited{/*访问前后链接的状态*/
+	text-decoration: none;/*没有文本修饰*/
+}
+a:hover{
+	color: #ff0000;
+	text-decoration: underline;/*下划线*/
+}
+dd{
+	font-size: 22px;
+	line-height: 38px;
+	color: #333333;
+}
+dd::before{
+	content: url(img/11.png);
+}
+dd:nth-child(odd){/*修饰的是第三个和第五个所以用的奇数选择器*/
+	color: #BDA793;
+}
+dd:nth-child(2) span{
+	color: #ff0000;
+	font-style: normal;/*正常字体*/
+	font-weight: bold;/*加粗*/
+}
+dd:nth-child(3) span{
+	color: #aaaa00;
+	font-style: normal;/*正常字体*/
+	font-weight: bold;/*加粗*/
+}
+dl{
+	display: none;/*列表隐藏*/
+}
+:target{/*显示链接的部分*/
+	display: block;
+}
