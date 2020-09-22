@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<!-- 
+		<button id="startBtn">自动绘图</button>
+		<button id="stopBtn">停止</button>
+		<button id="clearBtn">清除画布</button>
+		 -->
+		
+<script>
+//获取绘图环境
+let c2d = document.querySelector("#canvas").getContext("2d");
+let cArr =['green','red','blue','yellow','gray','pink'];
+
+			//绘制一个圆弧
+			c2d.lineWidth = 10;
+			c2d.arc(260,250,50,0,Math.PI,true);
+			c2d.stroke();
+
+			//绘制第2个圆弧
+			// c2d.beginPath();
+			// c2d.strokeStyle = 'green';
+			// c2d.arc(260,250,60,0,Math.PI,true)
+			// c2d.stroke();
+			
+			//循环画圆弧
+			for(let i =0;i<cArr.length;i++){
+				let s =cArr[i];//获取颜色值
+				c2d.beginPath();
+				c2d.strokeStyle = s;
+				c2d.arc(260,250,50+10*(i+1),0,Math.PI,true)
+				c2d.stroke();
+			}
+</script>
+	</body>
+<html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="http://2020wa.com/d/img/头像.jpg" >
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+
+<script src="http://2020wa.com/d/js/stu2.js"></script>
+<script>
+//获取绘图环境
+let c2d = document.querySelector("#canvas").getContext("2d");
+
+let arr = [];//存放所有人的图像对象
+//图片的路径 
+//  http://2020wa.com/d/img/姓名.jpg
+
+//获取所有同学的头像路径 并创建图片对象
+for(let one of stu2){ ////one = {num:'201905030705',name:'叶义震'}
+	
+	let src =  `http://2020wa.com/d/img/stu2/${one.name}.jpg`;
+	let img = new Image();
+	img.src = src;
+	arr.push(img);
+}
+//console.log(arr);
+
+run();
+function run(){
+	for(let img of arr){
+		img.onload = function(){
+			let x = parseInt( Math.random()*400 +50  );
+			let y = parseInt( Math.random()*400 +50  );
+			c2d.drawImage(img,x,y,50,50);
+		}
+	}
+	requestAnimationFrame(run);
+}
+
+
+
+
+</script>
+	</body>
+</html>

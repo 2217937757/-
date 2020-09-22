@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<style>
+			#canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+
+<script>
+let c2d  = document.querySelector("#canvas").getContext('2d');
+
+//创建图像
+let img = new Image();
+img.src =  "http://2020wa.com/d/img/头像.jpg";
+//在头像资源加载完绘制
+img.onload = function(){
+	
+	c2d.drawImage(img,40,40,100,100);
+	c2d.drawImage(img,140,140,100,100);
+	c2d.drawImage(img,240,240,100,100);
+	c2d.drawImage(img,240,40,100,100);
+	c2d.drawImage(img,40,240,100,100);
+}
+
+/* TO DO  */
+//创建一个变量 img2 
+let img2 = new Image();
+img2.src = "http://2020wa.com/d/img/stu2/肖刚.jpg";
+//设置img2的src属性为你的头像地址
+//1班  http://2020wa.com/d/img/stu1/姓名.jpg
+
+//2班  http://2020wa.com/d/img/stu2/姓名.jpg
+
+
+//通过c2d.drawImage(img2,x,y,100,100);绘制你的头像
+img2.onload = function(){
+	c2d.drawImage(img2,40,140,100,100);
+	c2d.drawImage(img2,140,40,100,100);
+	c2d.drawImage(img2,240,140,100,100);
+	c2d.drawImage(img2,140,240,100,100);
+}
+
+	
+</script>
+
+
+	</body>
+</html>

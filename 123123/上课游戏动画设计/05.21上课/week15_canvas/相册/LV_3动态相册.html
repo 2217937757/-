@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+
+
+<script src="js/myImg.js"></script>
+<script src="http://2020wa.com/d/js/stu3.js"></script>
+<script>
+let c2d  = document.querySelector("#canvas").getContext('2d');
+let arr = [];//存放所有人头像对象
+let arrObj = [];//存放所有对象
+
+for(let one of stu3){ //循环获取每一个同学的信息
+	let img = getImg(one);
+	
+	arr.push(img);
+}
+console.log(arr);
+
+for(let img of arr){
+	img.onload = function(){
+		let x = parseInt(50+ Math.random()*400  ); 
+		let y = parseInt(50+ Math.random()*400  );
+		let one = new myImg(x,y,img);
+		arrObj.push(one);
+	}
+}
+
+//动画函数
+run();
+function run(){
+	c2d.clearRect(0,0,500,500);
+	for(let one of arrObj){
+		one.draw();
+	}
+	requestAnimationFrame(run);
+}
+
+
+
+//自定义函数getImg 获取生成网络图像 
+function getImg(one){ //one = {num:'201905030801',name:'郝莹楠'}
+	let img = new Image();
+	let num = one.num.substr(9,3);//学号后3位
+	img.src =  `http://2020wa.com/d/img/stu3/${num}${one.name}.jpg`;
+	return img;
+}
+
+
+
+</script>
+		
+	</body>
+</html>

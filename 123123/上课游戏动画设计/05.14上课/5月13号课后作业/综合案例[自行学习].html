@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				height: 30px;
+			}
+			
+			div>span{
+				border: 1px solid black;
+				padding: 2px;
+				cursor: pointer; 
+				user-select: none; /* 不可选中文本 */
+			}
+			
+			.pick{
+				background-color: pink;
+			}
+			
+			#canvas{
+				border: 1px solid black;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div>
+			lineWidth线宽:
+			<input id="box" type="text" value="10" disabled style="width:30px;">
+			<button>+</button>
+			<button>-</button>
+		</div>
+		<div id="div2">
+			lineCap线帽样式:
+			<span class="pick" title="无线帽">butt</span>
+			<span  title="圆形">round</span>
+			<span  title="正方形">square</span>
+		</div>
+		<div id="div3">
+			lineJoin交接处样式:
+			<span class="pick" title="尖角">miter</span>
+			<span  title="圆角">round</span>
+			<span  title="斜角">bevel</span>
+		</div>
+		<div id="div4">
+			setLineDash()设置虚线样式：
+			<span class="pick">[10,5]</span>
+			<span>[5,5]</span>
+			<span>[10,5,5,5]</span>
+			<span>[2,2]</span>
+		</div>
+		
+		<canvas id="canvas" width="300" height="300"></canvas>
+		
+<script>
+//获取绘图环境
+let c2d = document.querySelector("#canvas").getContext("2d");
+let a = 10;
+let bArr = ['butt','round','square'];
+let cArr = ['miter','round','bevel'];
+let dArr = [
+	[10,5],
+	[5,5],
+	[10,5,5,5],
+	[2,2]
+];
+let b  = bArr[0];
+let c  = cArr[0];
+let d  = dArr[0];
+
+
+draw(a,b,c,d);
+
+function draw(a,b,c,d){
+	
+	c2d.clearRect(0,0,300,300);
+	c2d.lineWidth = a;
+	c2d.lineCap = b;
+	c2d.lineJoin = c;
+	c2d.setLineDash(d);
+	
+	c2d.moveTo(20,20);
+	c2d.lineTo(250,20);
+	c2d.lineTo(20,200);
+	c2d.lineTo(220,200);
+	c2d.stroke();
+}
+
+
+//设置第一个控件
+let upBtn = box.parentNode.children[1];
+let downBtn = box.parentNode.children[2];
+
+// onmousedown鼠标按下事件 
+// onmouseup鼠标抬起事件
+upBtn.onmousedown = function(){
+	let dsq  = setInterval(function(){
+		a++;
+		box.value= a;
+		draw(a,b,c,d);
+	},100);
+	
+	this.onmouseup =function(){ //清空定时器
+		clearInterval(dsq); 
+	}
+	
+}
+
+downBtn.onmousedown = function(){
+	let dsq  = setInterval(function(){
+		a--;
+		box.value= a;
+		draw(a,b,c,d);
+	},100);
+	
+	this.onmouseup =function(){ //清空定时器
+		clearInterval(dsq); 
+	}
+	
+}
+
+//第2个控件
+let spanArr2 = document.querySelectorAll("#div2 span");
+console.log(spanArr2);
+for(let span of spanArr2){
+	span.onclick = function(){
+		//清除已选中
+		let one= this.parentNode.querySelector(".pick");
+		one.classList.remove("pick");
+		
+		this.classList.add("pick");
+		b = this.innerHTML; 
+		draw(a,b,c,d);
+	}
+}
+
+//第3个控件
+let spanArr3 = document.querySelectorAll("#div3 span");
+for(let span of spanArr3){
+	span.onclick = function(){
+		//清除已选中
+		let one= this.parentNode.querySelector(".pick");
+		one.classList.remove("pick");
+		
+		this.classList.add("pick");
+		c = this.innerHTML; 
+		draw(a,b,c,d);
+	}
+}
+
+//第4个值
+let spanArr4 = document.querySelectorAll("#div4 span");
+for(let i =0;i<spanArr4.length ; i++){
+	let span = spanArr4[i];
+	span.onclick = function(){
+		//清除已选中
+		let one= this.parentNode.querySelector(".pick");
+		one.classList.remove("pick");
+		
+		this.classList.add("pick");
+		d = dArr[i]; 
+		draw(a,b,c,d);
+	}
+}	
+
+</script>
+
+
+
+		
+	</body>
+</html>

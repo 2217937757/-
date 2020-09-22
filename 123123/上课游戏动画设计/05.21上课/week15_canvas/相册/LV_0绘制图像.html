@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+<script>
+let c2d  = document.querySelector("#canvas").getContext('2d');
+
+//创建图像
+let img = new Image();
+img.src =  "http://2020wa.com/d/img/头像.jpg";
+//在头像资源加载完绘制
+img.onload = function(){
+	
+	c2d.drawImage(img,40,20,100,100);
+}
+
+
+
+
+</script>
+		
+	</body>
+</html>

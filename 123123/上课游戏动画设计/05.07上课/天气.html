@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = ["晴天","阴天","雨天"];
+			var n = Math.random() * arr.length;
+			n = parseInt(n);//取整
+			var w = arr[n];//获取随机天气
+			
+			document.write(w);
+			
+			switch(w){
+				case'晴天':
+				document.writeln("今天是晴天");
+				break;
+				case'阴天':
+				document.writeln("今天是阴天");
+				break;
+				case'雨天':
+				document.writeln("今天是雨天");
+				break; 
+			
+				
+				var point = parseInt(Math.random()*10);
+				
+				document.writeln(`学生得分是￥{point}`);
+				switch(point){
+					case 9:
+					case 8:
+					document.writeln("优秀");
+					break;
+					case 7:
+					case 6:
+					document.writeln("优秀");
+					break;
+					default:
+					document.writeln("不及格");
+					break;
+				}		
+					
+				document.writeln("<br>");
+				switch(point){
+					case 9:
+					case 8:
+					break;
+					case 7:
+					case 6:
+					document.writeln("合格");
+					break;
+					default:
+					document.writeln("不合格");
+					break;
+				}			
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid #000000;
+				}
+		</style>
+	</head>
+	<body>
+		<div>
+			lineWidth:
+			<input id="box" datafld type="text" value="10" style="width: 30px;">
+			<button>+</button>
+			<button>-</button>
+		</div>
+		
+		<canvas id="canvas" width="300px" height="300px"></canvas>
+		
+		<script type="text/javascript">
+			let c2d = document.querySelector("#canvas").getContext('2d');
+			
+			/* c2d.lineWidth = 10;
+			c2d.moveTo(20,150);
+			c2d.lineTo(280,150);
+			c2d.stroke(); */
+			draw(10);
+			
+			//自定义函数
+			function draw(w){
+				c2d.clearRect(0,0,300,300);
+				c2d.lineWidth = w;
+				c2d.moveTo(20,150);
+				c2d.lineTo(280,150);
+				c2d.stroke();
+			}
+			
+			//  +  - 绑定事件
+			//onmousedown 鼠标按下
+			//onmouseup  鼠标抬起 
+			//根据输入框位置获取两个按钮对象
+			let upBtn = box.parentNode.children[1];//+号按钮
+			let downBtn = box.parentNode.children[2];//-号按钮
+			
+			let a = 10;
+			
+			console.log(upBtn);
+			
+			//在加号上绑定鼠标按下事件
+			upBtn.onmousedown = function(){
+				//设置定时器 每隔0.1秒重复执行
+				let dsq = setInterval(function){
+					a + + ;
+					box.value = a;
+				},100);
+				
+				//当鼠标抬起时 清除定时器
+				this.onmouseup = function(){
+					clearInterval(dsq);
+				}
+			}
+			
+			//在减号上绑定鼠标按下事件
+			downBtn.onmousedown = function(){
+				//设置定时器 每隔0.1秒重复执行
+				let dsq = setInterval(function){
+					a - - ;
+					box.value = a;
+					draw(a);
+				},100);
+				
+				//当鼠标抬起时 清除定时器
+				this.onmouseup = function(){
+					clearInterval(dsq);
+				}
+			}
+		</script>
+	</body>
+</html>

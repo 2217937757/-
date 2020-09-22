@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+
+<script src="http://2020wa.com/d/js/stu2.js"></script>
+<script src="http://2020wa.com/d/js/myText.class.js"></script>
+
+<script>
+//获取绘图环境
+let c2d = document.querySelector("#canvas").getContext("2d");
+
+let arr = []; //存放所有弹幕对象
+
+c2d.font="bold 30px 微软雅黑"; //设置字体
+c2d.strokeStyle ="red"; 	//设置绘图的颜色
+
+// 导入学生数据 stu2
+// 创建学生弹幕对象 
+for(let one of stu2){ 	//one = {num:'201905030705',name:'叶义震'}
+	let x = parseInt(  Math.random()*400 +50 ); //50~450
+	let y = parseInt(  Math.random()*400 +50 ); //50~450
+	let text = one.name;
+	let s  =  new myText(x,y,text); //创建一个学生姓名对象
+	arr.push(s);
+}
+console.log(arr);
+
+//主动画函数
+run();//调用函数run 
+function run(){
+	//清空画布
+	c2d.clearRect(0,0,500,500);
+	//获取画布的宽w  获取画布的高
+	// let w = c2d.canvas.width;
+	// let h = c2d.canvas.height;
+	// c2d.clearRect(0,0,w,h);
+	
+	//c2d.clearRect(200,200,200,200);
+	
+	//循环每一个弹幕
+	for(let one of arr ){
+		one.draw();
+	}
+	
+	requestAnimationFrame(run);
+}
+
+
+</script>
+
+
+	
+	
+	</body>
+</html>

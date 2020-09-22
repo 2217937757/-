@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px #000000 solid;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="http://2020wa.com/d/img/头像.jpg">
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+		
+		<script>
+			
+			let c2d = document.querySelector("#canvas").getContext("2d");
+			
+			//创建img对象
+			let img = new Image();
+			img.src = "http://2020wa.com/d/img/头像.jpg";
+			
+			img.onload = function(){
+				//drawImage(图片对象,x坐标,y坐标)
+				c2d.drawImage(img,0,0);
+				//drawImage(图片对象,x坐标,y坐标,设置宽,设置高)
+				c2d.drawImage(img,200,200,100,100)
+				c2d.drawImage(img,300,300,50,50)
+				
+				/* c2d.moveTo(75,60);
+				c2d.bezierCurveTo(125,20,125,100,75,115);
+				C2d.bezierCurveTo(25,100,25,20,75,60);
+				c2d.stroke();
+				//c2d.fi1l();
+				//第2步,使用clip()方法,使得切割区域为上面绘制的基本图形
+				c2d.clip();
+				//第3步,绘制一张图片
+				let img = new Image(); 
+				img.src = "http://2020wa . com/d/img/头像.jpg";
+				img.onload = function(){
+				c2d.drawImage(img,75,60,100,100); */
+		}
+
+			
+		</script>
+		
+	</body>
+</html>

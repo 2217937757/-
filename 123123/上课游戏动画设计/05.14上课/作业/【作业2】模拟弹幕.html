@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			#canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<!--  -->
+		<canvas id="canvas" width="500" height="500"></canvas>
+
+	
+<script>
+//获取绘图环境
+let c2d = document.querySelector("#canvas").getContext('2d');
+let text = "bilibili干杯";
+
+
+
+//定义一个弹幕类
+class myText{
+	constructor(x,y) {
+	    this.x = x;
+		this.y = y;
+		this.vx = parseInt(Math.random()*3+1);
+	}
+	
+	//更新位置方法
+	update(){
+		if(this.x>500){
+			this.x = 0;
+		}
+		this.x += this.vx;
+	}
+	
+	//绘图方法{
+	draw(){
+		this.update();//更新位置
+		c2d.font = "bold 30px 微软雅黑";
+		c2d.strokeStyle = "purple";
+		c2d.strokeText(text,this.x,this.y);
+	}
+}
+//创建文字的实例
+let arr = [];//存放弹幕
+for(let i=0;i<5;i++){
+	let x = parseInt(Math.random()*400);
+	let y = parseInt(Math.random()*700);
+	let one = new myText(x,y);
+	arr.push(one);
+}
+
+
+//执行主动画函数
+
+run();
+
+function run(){
+	c2d.clearRect(0,0,500,500);//清除画布
+	//循环显示每一个弹幕
+	for(let one of arr){
+		one.draw();
+	}
+	//16.667ms执行
+	requestAnimationFrame(run);
+}
+
+	
+</script>
+
+
+	</body>
+</html>
