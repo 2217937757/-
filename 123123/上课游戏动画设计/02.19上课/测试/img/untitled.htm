@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		<title>19级web班2班</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		
+		<button id="btn">点击播放音乐</button>
+		<audio id="mp3" src="audio/出征.mp3" controls>
+			当前浏览器不支持audio
+		</audio>
+		
+		<div>
+			大家好，我是刘橙老师！<br>
+			我们是19级web 2班的同学！<br>
+			第一天早起！棒棒哒！
+		</div>
+		<img src="img/1.jpg" >
+		
+<script>
+//获取 id="btn"的元素并赋值给btn
+let btn = document.querySelector("#btn");
+
+//获取 id="mp3"的元素并赋值给mp3
+let mp3 = document.querySelector("#mp3");
+
+
+//在btn元素上绑定 点击事件 
+btn.onclick = function(){  //当用户点击时执行以下 函数
+	
+	//点击的元素中包含的HTML替换为以下文本
+	this.innerHTML ="音乐正在播放中，请稍后。。。";
+	
+	mp3.play(); //叫做mp3的元素 执行 play 方法
+}
+
+
+</script>
+
+
+		
+	</body>
+</html>

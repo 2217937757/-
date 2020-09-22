@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+				background-color: #E1E1E1;
+				}
+		</style>
+	</head>
+	<body>
+		低风险 22个<br />
+		中风险 17个<br />
+		高风险 37个<br />
+		一共76个地区<br />
+		<canvas id="canvas" width="800" height="400"></canvas>
+		<script>
+			//调用方法
+			let c2d = document.querySelector("#canvas").getContext("2d");
+			
+			// arc (圆心x，圆心y，半径，起始角，结束角，绘制的方向)
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="green";
+			c2d.arc(200,200,100,0,Math.PI*2);
+			c2d.fill();
+			
+			//中风险  17/76
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#b1b1b1";
+			c2d.moveTo(200,200);//移动到圆心  起始点
+			c2d.arc(200,200,100,0,17/76*Math.PI*2);
+			c2d.fill();
+			
+			//高风险  37/76
+			let a = 17/76*Math.PI*2;
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#1db185";
+			c2d.moveTo(200,200);//移动到圆心  起始点
+			c2d.arc(200,200,100,a,a+37/76*Math.PI*2);
+			c2d.fill();
+		</script>
+	</body>
+</html>

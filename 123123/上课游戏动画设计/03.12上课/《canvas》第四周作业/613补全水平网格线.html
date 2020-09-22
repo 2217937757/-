@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>你的名字</title>
+		<link rel="stylesheet" type="text/css" href="CSS/2.css"/>
+	</head>
+	<body>
+		<canvas id="canvas" width="600" height="500"></canvas>
+
+				<script>
+				//获取绘图环境
+				let c2d =  document.querySelector("#canvas").getContext("2d");
+
+				//设置线条属性
+				c2d.lineWidth = 0.5;
+				c2d.strokeStyle = "red";
+
+				//画两条竖线
+				c2d.beginPath();
+				c2d.moveTo(10.5,0);
+				c2d.lineTo(10.5,520);
+				c2d.stroke();
+
+				c2d.beginPath();
+				c2d.moveTo(20.5,0);
+				c2d.lineTo(20.5,520);
+				c2d.stroke();
+
+				//循环绘制竖线 从第三条线开始 
+				for(let x = 30.5;x < 600; x+=10){
+					c2d.beginPath();
+					c2d.moveTo(x,0);
+					c2d.lineTo(x,520);
+					c2d.stroke();
+				}
+
+				//绘制第1条水平线
+				c2d.strokeStyle = "black"; //黑色
+				c2d.beginPath();
+				c2d.moveTo(0,10.5);
+				c2d.lineTo(600,10.5);
+				c2d.stroke();
+				
+				c2d.strokeStyle = "black"; //黑色
+				c2d.beginPath();
+				c2d.moveTo(0,20.5);
+				c2d.lineTo(600,20.5);
+				c2d.stroke();
+
+				//绘制第2条直线 整体向下移动 10个像素
+				//****************************TO DO****************************
+				
+				//绘制第3条~最后 开始 我们使用循环绘制 
+				//for(初始化语句;循环条件;每次循环的累加器){
+				//	循环体;
+				//}
+
+				for(let y =30.5 ; y<500 ; y+=10 ){
+					//****************************TO DO****************************
+					c2d.strokeStyle = "black";
+					c2d.beginPath();
+					c2d.moveTo(0,y);
+					c2d.lineTo(600,y);
+					c2d.stroke();
+				}
+
+
+
+				</script>
+
+	</body>
+</html>

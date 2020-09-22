@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				display: flex;/*弹性盒子布局*/
+				flex-wrap: wrap;/*换行*/
+			}
+			.box{
+				width: 170px;
+				height: 220px;
+				position: relative;/*相对定位*/
+				border: 1px solid #005500;
+				display: block;/*快捷元素 独占一行*/
+				margin: 20px;
+			}
+			.box .stu{/*右上角图片*/
+				width: 40px;
+				height: 40px;
+				position: relative;/*相对定位*/
+				top: -20px;     /*距离顶部*/
+				right: -150px;   /*距离右边界*/
+				border-radius: 50%;/*边框圆角*/
+				display: block;
+			}
+			.box .st{/*中间图片*/
+				width: 140px;
+				height: 140px;
+				position: relative;/*相对定位*/
+				top: -25px;     /*距离顶部*/
+				right: -15px;   /*距离右边界*/
+				box-shadow: 3px 3px 3px 3px #ffaa00;/*图片阴影*/
+				display: block;
+			}
+			.box span{
+				margin-top: -10px;
+				text-align: center;
+				font-size: 30px;
+				display: block;/*快捷元素 独占一行*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/贾智.jpg"><img class="st" src="./第5周作业_canvas/相片/贾智.jpg"><span>贾智</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/熊子洋.jpg"><img class="st" src="./第5周作业_canvas/相片/熊子洋.jpg"><span>熊子洋</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/胡滨.jpg"><img class="st" src="./第5周作业_canvas/相片/胡滨.jpg"><span>胡滨</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/刘佳伟.jpg"><img class="st" src="./第5周作业_canvas/相片/刘佳伟.jpg"><span>刘佳伟</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/赵海宏.jpg"><img class="st" src="./第5周作业_canvas/相片/赵海宏.jpg"><span>赵海宏</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/周奇杰.jpg"><img class="st" src="./第5周作业_canvas/相片/周奇杰.jpg"><span>周奇杰</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/李美平.jpg"><img class="st" src="./第5周作业_canvas/相片/李美平.jpg"><span>李美平</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/刘兴康.jpg"><img class="st" src="./第5周作业_canvas/相片/刘兴康.jpg"><span>刘兴康</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/朱典航.jpg"><img class="st" src="./第5周作业_canvas/相片/朱典航.jpg"><span>朱典航</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/陈垚.jpg"><img class="st" src="./第5周作业_canvas/相片/陈垚.jpg"><span>陈垚</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/李周燃.jpg"><img class="st" src="./第5周作业_canvas/相片/李周燃.jpg"><span>李周燃</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/詹明亮.jpg"><img class="st" src="./第5周作业_canvas/相片/詹明亮.jpg"><span>詹明亮</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/肖刚.jpg"><img class="st" src="./第5周作业_canvas/相片/肖刚.jpg"><span>肖刚</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/何杰.jpg"><img class="st" src="./第5周作业_canvas/相片/何杰.jpg"><span>何杰</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/张世海.jpg"><img class="st" src="./第5周作业_canvas/相片/张世海.jpg"><span>张世海</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/李子龙.jpg"><img class="st" src="./第5周作业_canvas/相片/李子龙.jpg"><span>李子龙</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/袁志凌.jpg"><img class="st" src="./第5周作业_canvas/相片/袁志凌.jpg"><span>袁志凌</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/范黎琪.jpg"><img class="st" src="./第5周作业_canvas/相片/范黎琪.jpg"><span>范黎琪</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/曾晨旭.jpg"><img class="st" src="./第5周作业_canvas/相片/曾晨旭.jpg"><span>曾晨旭</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/李翔.jpg"><img class="st" src="./第5周作业_canvas/相片/李翔.jpg"><span>李翔</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/孙迪.jpg"><img class="st" src="./第5周作业_canvas/相片/孙迪.jpg"><span>孙迪</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/王志强.jpg"><img class="st" src="./第5周作业_canvas/相片/王志强.jpg"><span>王志强</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/秦川.jpg"><img class="st" src="./第5周作业_canvas/相片/秦川.jpg"><span>秦川</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/郑亮.jpg"><img class="st" src="./第5周作业_canvas/相片/郑亮.jpg"><span>郑亮</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/黄坤.jpg"><img class="st" src="./第5周作业_canvas/相片/黄坤.jpg"><span>黄坤</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/刘兴健.jpg"><img class="st" src="./第5周作业_canvas/相片/刘兴健.jpg"><span>刘兴健</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/袁可辉.jpg"><img class="st" src="./第5周作业_canvas/相片/袁可辉.jpg"><span>袁可辉</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/李港.jpg"><img class="st" src="./第5周作业_canvas/相片/李港.jpg"><span>李港</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/杜文广.jpg"><img class="st" src="./第5周作业_canvas/相片/杜文广.jpg"><span>杜文广</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/徐梦祎.jpg"><img class="st" src="./第5周作业_canvas/相片/徐梦祎.jpg"><span>徐梦祎</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/张燕珍.jpg"><img class="st" src="./第5周作业_canvas/相片/张燕珍.jpg"><span>张燕珍</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/阳晴.jpg"><img class="st" src="./第5周作业_canvas/相片/阳晴.jpg"><span>阳晴</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/郭君霞.jpg"><img class="st" src="./第5周作业_canvas/相片/郭君霞.jpg"><span>郭君霞</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/邹慧慧.jpg"><img class="st" src="./第5周作业_canvas/相片/邹慧慧.jpg"><span>邹慧慧</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/丁金星.jpg"><img class="st" src="./第5周作业_canvas/相片/丁金星.jpg"><span>丁金星</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/张钦钦.jpg"><img class="st" src="./第5周作业_canvas/相片/张钦钦.jpg"><span>张钦钦</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/王雨薇.jpg"><img class="st" src="./第5周作业_canvas/相片/王雨薇.jpg"><span>王雨薇</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/周雪.jpg"><img class="st" src="./第5周作业_canvas/相片/周雪.jpg"><span>周雪</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/杨凤.jpg"><img class="st" src="./第5周作业_canvas/相片/杨凤.jpg"><span>杨凤</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/钟保菊.jpg"><img class="st" src="./第5周作业_canvas/相片/钟保菊.jpg"><span>钟保菊</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/吴家美.jpg"><img class="st" src="./第5周作业_canvas/相片/吴家美.jpg"><span>吴家美</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/龚佩.jpg"><img class="st" src="./第5周作业_canvas/相片/龚佩.jpg"><span>龚佩</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/毛攀.jpg"><img class="st" src="./第5周作业_canvas/相片/毛攀.jpg"><span>毛攀</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/周宇.jpg"><img class="st" src="./第5周作业_canvas/相片/周宇.jpg"><span>周宇</span></div>
+		<div class="box"><img class="stu" src="./第5周作业_canvas/相片/朱明慧.jpg"><img class="st" src="./第5周作业_canvas/相片/朱明慧.jpg"><span>朱明慧</span></div>
+	</body>
+</html>

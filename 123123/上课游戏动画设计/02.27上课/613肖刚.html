@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+			background-color:pink;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id=canvas width="500" height="500"></canvas>
+		<script>
+			let canvas = document.querySelector("canvas");
+			let c2d = canvas.getContext("2d");
+			
+			
+			//第1个数 6
+			//6第一横
+			c2d. moveTo(5,5); //画笔移动到的起点
+			c2d. lineTo(45,5); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			//6的第二横
+			c2d. moveTo(45,45); //画笔移动到的起点
+			c2d. lineTo(5,45); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			//6的第三横
+			c2d. moveTo(45,85); //画笔移动到的起点
+			c2d. lineTo(5,85); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			//6的右边竖
+			c2d. moveTo(45,45); //画笔移动到的起点
+			c2d. lineTo(45,85); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			//6的左边竖
+			c2d. moveTo(5,5); //画笔移动到的起点
+			c2d. lineTo(5,85); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			
+			//第二个数 1
+			c2d. moveTo(85,5); //画笔移动到的起点
+			c2d. lineTo(85,85); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			
+			//第三个数 3
+			//第一横
+			c2d. moveTo(115,5); //画笔移动到的起点
+			c2d. lineTo(155,5); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			//第二横
+			c2d. moveTo(115,45); //画笔移动到的起点
+			c2d. lineTo(155,45); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			//第三横
+			c2d. moveTo(115,85); //画笔移动到的起点
+			c2d. lineTo(155,85); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			//竖
+			c2d. moveTo(155,5); //画笔移动到的起点
+			c2d. lineTo(155,85); //经过的目标点
+			c2d. stroke(); //绘制轮廓
+			
+		</script>
+			
+	</body>
+</html>

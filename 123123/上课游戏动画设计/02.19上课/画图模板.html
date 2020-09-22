@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style> /*绘图背景*/
+			#canvas{
+			background-color:pink;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id=canvas width="500" height="500"></canvas>
+		<script>
+			let canvas = document.querySelector("canvas");
+			let c2d = canvas.getContext("2d");
+			
+			c2d. moveTo(0,0); //画笔移动到的起点
+			c2d. lineTo(0,0); //经过的目标点
+			c2d. lineTo(0,0);//经过的目标点
+			c2d. stroke(); //绘制轮廓
+			
+		
+		
+		</script>
+	</body>
+</html>

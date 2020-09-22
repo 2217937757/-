@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+			background-color:pink;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id=canvas width="500" height="500"></canvas>
+		<script>
+			let canvas = document.querySelector("canvas");
+			let c2d = canvas.getContext("2d");
+			
+			c2d. moveTo(100 , 100); //画笔移动到的起点
+			c2d. lineTo(200 ,200); //经过的目标点
+			c2d. lineTo(100, 200);//经过的目标点
+			c2d. stroke(); //绘制轮廓
+
+			let x = 200;
+			c2d. strokeStyle ="#ff00ff";
+			c2d. beginPath(); //路径的开始
+			c2d. moveTo(100+x, 100); //画笔移动到的起点
+			c2d. lineTo(200+x , 200) ;
+			c2d. lineTo(100+x , 200);
+			c2d. closePath();//路径的关闭
+			c2d. stroke();
+			
+			c2d. strokeStyle ="#aaaa7f";
+			c2d. beginPath(); //路径的开始
+			c2d. moveTo(100+x+20, 100+40); //画笔移动到的起点
+			c2d. lineTo(200+x+20, 200+40);
+			c2d. lineTo(100+x+20, 200+40);
+			c2d. closePath();//路径的关闭
+			c2d. stroke();
+			
+			c2d. strokeStyle ="#005500";
+			c2d. beginPath(); //路径的开始
+			c2d. moveTo(100+x+40, 100+80); //画笔移动到的起点
+			c2d. lineTo(200+x+40, 200+80);
+			c2d. lineTo(100+x+40, 200+80);
+			c2d. closePath();//路径的关闭
+			c2d. stroke();
+			
+			
+
+
+		</script>
+		
+	</body>
+</html>

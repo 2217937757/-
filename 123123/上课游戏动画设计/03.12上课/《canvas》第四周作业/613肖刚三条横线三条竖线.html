@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>613</title>
+		<link rel="stylesheet" type="text/css" href="CSS/1.css"/>
+	</head>
+	<body>
+		<a href="https://docs.qq.com/doc/DSWlMV0VhWXpJcEZ0" target="_blank">
+			作业要求
+		</a>
+		<canvas id="canvas" width="800" height="520"></canvas>
+				<section>
+				要求：<br>
+				1.绘制三条 颜色、粗细 不一样的竖线<br>
+				2.绘制三条 颜色、粗细 不一样的横线<br>
+				长短自定义 颜色
+				</section>
+
+				<script>
+				//获取绘图环境
+				let c2d =  document.querySelector("#canvas").getContext("2d");
+				
+				c2d.beginPath();
+				c2d.lineWidth=1;
+				c2d.strokeStyle='#000000',
+				c2d.moveTo(10,30);
+				c2d.lineTo(500,30);
+				c2d.stroke();
+				
+				c2d.beginPath();
+				c2d.lineWidth=3;
+				c2d.strokeStyle='#4ba133',
+				c2d.moveTo(200,60);
+				c2d.lineTo(300,60);
+				c2d.stroke();
+				
+				c2d.beginPath();
+				c2d.lineWidth=6;
+				c2d.strokeStyle='#4039a1',
+				c2d.moveTo(400,90);
+				c2d.lineTo(600,90);
+				c2d.stroke();
+				
+				
+				c2d.beginPath();
+				c2d.lineWidth=7;
+				c2d.strokeStyle='#4039a1',
+				c2d.moveTo(30,100);
+				c2d.lineTo(30,500);
+				c2d.stroke();
+				
+				c2d.beginPath();
+				c2d.lineWidth=9;
+				c2d.strokeStyle='#3488a1',
+				c2d.moveTo(60,66);
+				c2d.lineTo(60,156);
+				c2d.stroke();
+				
+				c2d.beginPath();
+				c2d.lineWidth=4;
+				c2d.strokeStyle='#a10f51',
+				c2d.moveTo(90,78);
+				c2d.lineTo(90,166);
+				c2d.stroke();
+				
+
+
+				</script>
+
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+<script>
+//获取绘图环境
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
+
+//设置绘图容器的宽和高
+canvas.width = 800;
+canvas.height=500;
+
+var x = 50;
+var y = 50;
+var flag = 1;
+//浏览器窗口对象 调用setInterval 定时器功能
+//setInterval( 函数,时间毫秒 ) 1000毫秒= 1秒
+window.setInterval(draw,100);
+
+function draw(){
+	
+	x=x+5;//每次修改x 加上5
+	y=y+ flag * Math.random() * 5 ; //每次修改 y加上随机数0~5
+	context.strokeRect(x,y,50,50);
+	
+	
+	//如果 到达画布一半的位置 垂直反向
+	if(y > canvas.height /2 ){
+		flag = -flag;
+	}
+	
+}
+
+
+
+</script>
+
+
+
+		
+		
+	</body>
+</html>

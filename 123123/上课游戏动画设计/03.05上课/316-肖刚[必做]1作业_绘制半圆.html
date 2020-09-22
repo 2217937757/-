@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{
+				background-color: #E1E1E1;
+			}
+		</style>
+		
+	</head>
+	<body>
+<pre>
+1.[必做]以学号后2位+50作为圆的半径
+	1.绘制 4个半圆，顺序自定
+	2.绘制 4个四分之一圆 
+	3.每个图像之间间隔均匀 不要有重叠
+	上传文件为  "学号后3位+姓名.html"
+
+2.[提升]自主学习作业，看视频和文档资料(11点发) 学会绘制 太极图	
+	上传文件为  "学号后3位+姓名.html"
+</pre>
+			<canvas id="canvas" width="1200" height="600"></canvas>
+			<script>
+			let c2d = document.querySelector("#canvas").getContext("2d");
+			// arc (圆心x,圆心y,半径,起始角,结束角,绘制的方向)
+			
+			//整圆
+			c2d.beginPath();//独立路径的开始
+			c2d.arc(200,200,50+16,0,Math.PI*2);
+			c2d.stroke();
+			
+			//下半圆
+			c2d.beginPath();//独立路径的开始
+			c2d.arc(400,200,50+16,0,Math.PI);
+			c2d.stroke();
+			
+			//上半圆
+			c2d.beginPath();//独立路径的开始
+			c2d.arc(600,200,50+16,Math.PI,Math.PI*2);
+			c2d.stroke();
+
+			//右圆
+			c2d.beginPath();//独立路径的开始
+			c2d.arc(800,200,50+16,-Math.PI/2,Math.PI/2);
+			c2d.stroke();
+			
+			//左圆
+			c2d.beginPath();//独立路径的开始
+			c2d.arc(1000,200,50+16,Math.PI/2,Math.PI/2*3);
+			c2d.stroke();
+			
+			//实心圆
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#FFC0CB";
+			c2d.arc(200,400,50+16,0,Math.PI*2);
+			c2d.fill();
+
+			//右上实心圆
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#ffaa00";
+			c2d.moveTo(400,400)
+			c2d.arc(400,400,50+16,-Math.PI/2,0);
+			c2d.fill();
+			
+			
+			//右下实心圆
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#55ff7f";
+			c2d.moveTo(600,400);
+			c2d.arc(600,400,50+16,Math.PI*2,Math.PI/2);
+			c2d.fill();
+			
+			
+			//左上实心圆
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#ffff00";
+			c2d.moveTo(800,400);
+			c2d.arc(800,400,50+16,Math.PI,Math.PI/2*3);
+			c2d.fill();
+			
+			//左下实心圆
+			c2d.beginPath();//独立路径的开始
+			c2d.fillStyle="#ff007f";
+			c2d.moveTo(1000,400);
+			c2d.arc(1000,400,50+16,Math.PI/2,Math.PI);
+			c2d.fill();
+			</script>
+
+
+
+	</body>
+</html>

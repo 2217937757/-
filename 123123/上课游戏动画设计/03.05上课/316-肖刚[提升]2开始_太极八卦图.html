@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#canvas{ /* 匹配id="canvas"的元素 */
+				/* 边框:1个像素 实线 黑色 */
+				border:1px solid black; 
+				/* 背景颜色：颜色值; */
+				background-color: #E1E1E1;
+				margin: 0 auto;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+<!-- [提升]自主学习作业，看视频和文档资料(11点发) 学会绘制 太极图	
+	上传文件为  "学号后3位+姓名.html" 
+提交地址 云课堂智慧职教 ：
+https://zjy2.icve.com.cn/portal/login.html
+	
+	-->
+		<canvas id="canvas" width="400" height="400" ></canvas>
+		
+<script>
+let canvas = document.querySelector("#canvas");
+let c2d = canvas.getContext("2d");
+//绘制圆弧
+//arc(圆心x,圆心y,半径,起始角,结束角,绘制方向)
+//起始角和结束角 都是以弧度为单位的
+//一个圆就是2π ， Math.PI = π
+//π = 180°
+//绘制方向 默认是顺时针
+
+//圆心为(200,200)的圆，半径为100 
+//第一步 画两个大的半圆
+				//黑色实心右半圆圆
+				c2d.beginPath();//独立路径的开始
+				c2d.fillStyle="#000000";
+				c2d.arc(200,200,100,-Math.PI/2,Math.PI/2);
+				c2d.fill();
+				//白色实心左半圆圆
+				c2d.beginPath();//独立路径的开始
+				c2d.fillStyle="#ffffff";
+				c2d.arc(200,200,100,Math.PI/2,Math.PI/2*3);
+				c2d.fill();
+				
+				
+				//上面白色实心小圆
+				c2d.beginPath();//独立路径的开始
+				c2d.fillStyle="#ffffff";
+				c2d.arc(200,150,50,0,Math.PI*2);
+				c2d.fill();
+				//上面实心小圆中的小黑点
+				c2d.beginPath();//独立路径的开始
+				c2d.fillStyle="#000000";
+				c2d.arc(200,150,10,0,Math.PI*2);
+				c2d.fill();
+				
+				
+				//下面黑色小圆
+				c2d.beginPath();//独立路径的开始
+				c2d.fillStyle="#000000";
+				c2d.arc(200,250,50,0,Math.PI*2);
+				c2d.fill();
+				//实心小圆中的小白点
+				c2d.beginPath();//独立路径的开始
+				c2d.fillStyle="#ffffff";
+				c2d.arc(200,250,10,0,Math.PI*2);
+				c2d.fill();
+				
+</script>
+
+		
+	</body>
+</html>
