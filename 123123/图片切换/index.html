@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 链接jq文件 -->
+    <script src="https://2217937757.github.io/XIAO/js/jq.min.js"></script>
+    <!-- 样式 -->
+    <style>
+        div{
+            position: relative;/*绝对*/
+            left: 35%;
+            width: 500px;
+            height: 500px;
+        }
+        div img{
+            width: 500px;
+            height: 500px;
+            /*padding-left: 35%;*/
+            
+        }
+        div span{
+            position: absolute;/*相对*/
+            top: 90%;
+            /* right: 20%; */
+            /* font-size: 50px; */
+            border-radius: 40px;
+            background-color: #000000;
+            height: 20px;
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id = "img1">
+        <img src="https://2217937757.github.io/XIAO/img/背景1.jpg">
+        <!-- 行内式优先级最高 -->
+        <span id = 'q1' style="right: 30%"></span>
+        <span style="right: 20%"></span>
+        <span style="right: 10%"></span>
+
+    </div>
+    <script>
+
+        var i = 0;
+        // 设置图片组
+        var src = [ 
+                    'https://2217937757.github.io/XIAO/img/背景1.jpg',
+                    'https://2217937757.github.io/XIAO/img/婚后光子.png',
+                    'https://2217937757.github.io/XIAO/img/背景0.jpg'
+                ]
+        
+        // 给第一个小圆点上色
+        $('#q1').css('background','red')
+
+        //封装XIAO函数 替换属性
+        function XIAO(){
+       
+            i++;
+            
+            if(i > src.length-1){
+                i = 0;
+            }
+        //替换div img1的src属性
+            $('#img1 img').attr('src',src[i])
+        //替换小圆点颜色
+            $('#img1 span').css('background',"");
+            
+            $('#img1 span:eq('+i+')').css('background','red')
+           
+        }
+        //间隔1秒运行一次
+        var sj = setInterval(XIAO,1000)
+
+       
+        //鼠标移入暂停
+        $('#img1').mouseover(function(){
+            
+            clearInterval(sj);
+        })
+        //鼠标移出启动 每秒运行1次  同上
+        $('#img1').mouseout(function(){
+            
+            sj = setInterval(XIAO,1000)
+        })
+
+    </script>
+</body>
+</html>
+
+
+
+<!-- 个人网址提取图片
+    https://2217937757.github.io/XIAO
+'https://2217937757.github.io/XIAO/img/背景1.jpg',
+'https://2217937757.github.io/XIAO/img/背景0.jpg',
+'https://2217937757.github.io/XIAO/img/婚后光子.png'
+ -->
