@@ -1,4 +1,6 @@
-<!-- 		<script type="text/javascript">
+$(document).ready(function (){ 	
+		<script type="text/javascript">
+			
 			var i = 0;
 			
 			var src = [
@@ -2265,4 +2267,5 @@
 			}
 			var sj = setInterval(QAQ,40);
 			
-		</script> -->
+	});
+		</script> 
