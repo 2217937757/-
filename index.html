@@ -13,8 +13,8 @@
 				padding: 0;
 			}
 			img{
-				 width: 1000px;
-				 height: 500px;
+				 width: 800px;
+/* 				 height: 500px; */
 			}
 			.q0{
 				text-align: center;
@@ -2415,6 +2415,31 @@
 			var sj = setInterval(QAQ,40);
 			
 		</script> -->
-		
+		<script type="text/javascript">
+			var i = 0;
+			
+			var src = [
+				'背景1.jpg',
+				'b1.png',
+				'b2.png',
+				'b3.png',
+				'b4.png',
+				'b5.png',
+				'b6.png',
+				];
+			
+			function QAQ(){
+				
+				i++;
+				
+				if(i > src.length-1){
+					i = 0;
+				}
+				
+				$('#Q0 img').attr('src',src[i])
+			}
+			var sj = setInterval(QAQ,40);
+			
+		</script>
 	</body>
 </html>
