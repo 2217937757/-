@@ -1,5 +1,3 @@
-
-	<script type="text/javascript">
 		$(document).ready(function (){ 		
 			var i = 0;
 			
@@ -2268,4 +2266,3 @@
 			var sj = setInterval(QAQ,40);
 			
 	});
-		</script>
