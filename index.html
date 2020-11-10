@@ -149,30 +149,31 @@
 		
 
 		<script type="text/javascript">
-			var i = 0;
-			
-			var src = [
-				'img/背景1.jpg',
-				'img/b1.png',
-				'img/b2.png',
-				'img/b3.png',
-				'img/b4.png',
-				'img/b5.png',
-				'img/b6.png',
-				];
-			
-			function QAQ(){
-				
-				i++;
-				
-				if(i > src.length-1){
-					i = 0;
+			$(function(){
+				var i = 0;
+
+				var src = [
+					'img/背景1.jpg',
+					'img/b1.png',
+					'img/b2.png',
+					'img/b3.png',
+					'img/b4.png',
+					'img/b5.png',
+					'img/b6.png',
+					];
+
+				function QAQ(){
+
+					i++;
+
+					if(i > src.length-1){
+						i = 0;
+					}
+
+					$('#Q0 img').attr('src',src[i])
 				}
-				
-				$('#Q0 img').attr('src',src[i])
-			}
-			var sj = setInterval(QAQ,40);
-			
+				var sj = setInterval(QAQ,40);
+			})
 		</script>
 	</body>
 </html>
