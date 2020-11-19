@@ -1,0 +1,258 @@
+/* 重置样式 */
+body,ul{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+    color: #666;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* 头部样式 */
+.top{
+    width: 100%;
+    height: 30px;
+    background-color: #f1f1f1;
+}
+.danghangnan{
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 30px;
+}
+.danghangnan .wenzi{
+    float: left;
+}
+.danghangnan .daohangnanyoubian{
+    float: right;
+}
+.danghangnan .daohangnanyoubian li{
+    float: left;
+    list-style: none;
+    /* 上下边距为0 左右边距为5 */
+    margin: 0 5px; 
+}
+.top a{
+    color: #666;
+}
+/* 设置lf下的a标签颜色 */
+.wenzi .zuce{
+    color: #e33333;
+}
+.top a:hover{
+    color: #e33333;
+}
+
+/* logo */
+.logo{
+    width: 1200px;
+    margin: 20px auto;
+}
+.logo img{
+    /* 设置元素的基线对齐方式  行内块元素上 */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.logo span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* 全选样式 */
+.quanxuanlan{
+    width: 1200px;
+    margin: 0 auto;
+}
+.quanxuanlan span{
+    font-size: 16px;
+    color: #e33333;
+    font-weight: 700;
+    border-bottom: 2px solid #e33333;
+    padding-bottom: 5px;
+}
+/* 全选导航条 */
+.quanxuantiao{
+    width: 1200px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #f1f1f1;
+}
+.quanxuantiao div{
+    float: left;
+    text-align: center;
+    line-height: 40px;
+}
+.zhuti{
+    width: 1200px;
+	height: 100px;
+    margin: 20px auto;
+    padding-top: 20px;
+    border-top: 2px solid #666;
+}
+.zhuti div{
+    float: left;
+    text-align: center;
+}
+/* 复选框 */
+.zhuti .danxuan{
+    width: 50px;
+    text-align: left;
+}
+/* 商品样式 */
+.sangping{
+    width: 400px;
+}
+.sangping img{
+    vertical-align: top;
+}
+.sangping span{
+    display: inline-block;
+    width: 210px;
+}
+/* 单价 */
+.danjia{
+    width: 110px;
+}
+
+/* 数量 */
+.shuliang{
+    width: 170px;
+}
+.shuliang_s{
+    padding-left: 50px;
+}
+.shuliang a,.shuliang input{
+    float: left;
+}
+.shuliang a{
+    /* display: inline-block; */
+    border: 1px solid #666;
+    width: 18px;
+    height: 19px;
+    text-align: center;
+}
+.shuliang input{
+    border-left: none;
+    border-right: none;
+    width: 30px;
+    padding-left: 18px;
+}
+.xiaoji{
+    width: 130px;
+}
+.caozuo{
+    width: 130px;
+}
+.zongji{
+	margin: 0 auto;
+	width: 1200px;
+}
+.zongji div{
+	float: left;
+}
+.sancu{
+	width: ;
+}
+
+/*结算栏*/
+.zongjilan{
+	width: 1200px;
+	height: 50px;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	line-height: 50px;
+}
+.jiesuanzuo{
+	float: left;
+}
+.jiesuanyou{
+	float: right;
+}
+/* 总计全选 */
+.jiesuanzuo div, .jiesuanyou div{
+	float: left;
+}
+/* 结算全选与文本之间的间距 */
+.zongjilan .jiesuanquanxuna{
+	margin-right: 40px;
+}
+.jiesuanzuo a{
+	color: #666666;
+}
+.jiesuanzuo a:hover{
+	color: #E33333;
+}
+.jiesuanzuo .qinkong{
+	font-weight: 700;
+	margin-left: 20px;
+}
+/* 结算右 */
+.jiesuanyou .yixuan span{
+	color: #E33333;
+	font-weight: 700;
+	margin: 0 5px;
+}
+.jiesuanyou .jiesuanzongjia span{
+	color: #E33333;
+	font-weight: 700px;
+	font-size: 18px;
+}
+.jiesuanyou .jiesuanzongjia{
+	margin: 0 20px;
+}
+.jiesuanyou .qujiesuan{
+	width: 95px;
+	height: 50px;
+	background-color: #E33333;
+	color: #F1F1F1;
+	font-size: 18px;
+	font-weight: 700px;
+	text-align: center;
+}
+
+/* 底部 */
+.dibu{
+    width: 1200px;
+	height: 100px;
+    margin: 20px auto;
+    padding-top: 20px;
+    border-top: 2px solid #666;
+}
+.dibu div{
+    float: left;
+}
+.zhengping li{
+	float: left;
+	padding: 15px 40px 15px 1px;
+}
+
+.zhengping img{
+	float: left;
+	padding: 30px 0 0 40px;
+}
+
+/*底部中间*/
+.dizong dt{
+	float: left;
+	padding: 15px 80px 15px 40px;
+}
+.dizong dl{
+	float: left;
+}
+.dizong a{
+    color: #666666;
+}
+.dizong a:hover{
+    color: #e33333;
+}
+.dizong dt{
+	font-size: 20px;
+}
+.dixia{
+	text-align: center;
+	margin-left: 200px;
+}

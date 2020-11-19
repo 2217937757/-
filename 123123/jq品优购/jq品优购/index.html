@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>品优购</title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/gwc.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/gwc.css"/>
+	</head>
+	<body>
+		<div class="quanbu">
+			<!-- top开始 -->
+			<div class="top">
+				<!-- 导航栏 开始 -->
+				<div class="danghangnan">
+					<div class="wenzi">
+						<span>
+							品优购欢迎您！
+						</span>
+						<a href="#">请登录</a>
+						<a href="#" class="zuce">免费注册</a>
+					</div>
+				<!-- 导航栏 结束 -->
+				<!-- 导航栏右边  开始-->
+				<div class="daohangnanyoubian">
+					<ul>
+					    <li><a href="#">我的订单</a>&nbsp;&nbsp;|</li>
+					    <li><a href="#">我的品优购</a>&nbsp;&nbsp;|</li>
+					    <li><a href="#">品优购会员</a>&nbsp;&nbsp;|</li>
+					    <li><a href="#">企业采购</a>&nbsp;&nbsp;|</li>
+					    <li><a href="#">关注品优购</a>&nbsp;&nbsp;|</li>
+					    <li><a href="#">客户服务</a>&nbsp;&nbsp;|</li>
+					    <li><a href="#">网站导航</a></li>
+					</ul>
+				</div>
+				<!-- 清除浮动 -->
+				<div style="clear: both;"></div>
+				<!-- 清除浮动 -->
+				<!-- 导航栏右边  结束-->
+				</div>
+				<!-- top结束 -->
+			</div>
+				
+			<!-- logo -->
+			<div class="logo">
+				<img src="img/logo.png" alt="">
+				<span>购物车</span>
+			</div>
+			
+			<!-- 全选栏 开始 -->
+			<div class="quanxuanlan">
+				<div>
+					<span>全部商品</span>
+				</div>
+				<div class="quanxuantiao">
+					<div class="quxnuan">
+						<input type="checkbox" class="quanxuananniu" onclick="quanxuan()"\>全选
+					</div>
+					<div class="sangping">
+						商品
+					</div>
+					<div class="danjia">
+						单价
+					</div>
+					<div class="shuliang">
+						数量
+					</div>
+					<div class="xiaoji">
+						小计
+					</div>
+					<div class="caozuo">
+						操作
+					</div>
+				</div>
+			</div>
+			<!-- 全选栏 结束 -->
+			
+			<!-- 主体 开始 -->
+			<div class="zhuti">
+				<div class="danxuan">
+					<input type="checkbox" class='anniu' onclick="anniu()"/>
+				</div>
+				<div class="sangping">
+					<img src="upload/p1.jpg" >
+					<span>【5本26.8元】经典儿童文学彩图青少版八十天环游地球中学生语文教学大纲</span>
+				</div>
+				<div class="danjia">
+					￥12.6
+				</div>
+				<div class="shuliang S_shuliang">
+					<div class="shuliang_s">
+						<a href="#">-</a>
+						<input type="text" value="0" />
+						<a href="#">+</a>
+					</div>
+				</div>
+				<div class="xiaoji">
+					￥12.6
+				</div>
+				<div class="caozuo">
+					删除
+				</div>
+			</div>
+					
+			<div class="zhuti">
+				<div class="danxuan">
+					<input type="checkbox" class='anniu' onclick="anniu()"/>
+				</div>
+				<div class="sangping">
+					<img src="upload/p2.jpg" >
+					<span>【5本26.8元】经典儿童文学彩图青少版八十天环游地球中学生语文教学大纲</span>
+				</div>
+				<div class="danjia">
+					￥12.6
+				</div>
+				<div class="shuliang s_shuliang">
+					<div class="shuliang_s">
+						<a href="#">-</a>
+						<input type="text" value="0" />
+						<a href="#">+</a>
+					</div>
+				</div>
+				<div class="xiaoji">
+					￥12.6
+				</div>
+				<div class="caozuo">
+					删除
+				</div>
+			</div>
+					
+			<div class="zhuti">
+				<div class="danxuan">
+					<input type="checkbox" class='anniu' onclick="anniu()"/>
+				</div>
+				<div class="sangping">
+					<img src="upload/p3.jpg" >
+					<span>【5本26.8元】经典儿童文学彩图青少版八十天环游地球中学生语文教学大纲</span>
+				</div>
+				<div class="danjia">
+					￥12.6
+				</div>
+				<div class="shuliang S_shuliang">
+					<div class="shuliang_s">
+						<a href="#">-</a>
+						<input type="text" value="0" />
+						<a href="#">+</a>
+					</div>
+				</div>
+				<div class="xiaoji">
+					￥12.6
+				</div>
+				<div class="caozuo">
+					删除
+				</div>
+			</div>
+			<!-- 主体 结束 -->
+			
+			<!-- 结算栏 开始 -->
+			<div class="zongjilan">
+				<div class="jiesuanzuo">
+					<!-- 结算全选 -->
+					<div class="jiesuanquanxuna">
+						<input type="checkbox" class="jiesuanquanxuananniu" onclick="jiesuanquanxuan()"\>全选
+					</div>
+					<!-- 删除选中商品 -->
+					<div class="">
+						<a href="#">删除选中商品</a>
+						<a href="#" class="qinkong">清空购物车</a>
+					</div>
+				</div>
+				<div class="jiesuanyou">
+					<div class="yixuan">
+						已经选择
+						<span>
+							3
+						</span>
+						件商品
+					</div>
+					<div class="jiesuanzongjia">
+						总价：
+						<span>
+							37.8
+						</span>
+					</div>
+					<div class="qujiesuan">
+						去结算
+					</div>
+				</div>
+			</div>
+			<!-- 结算栏 结束 -->
+			
+		
+			<div class="dibu">
+					<div class="w">
+						<div class="zhengping">
+							<ul>
+								<img src="img/zheng1.png" >
+								<li>
+										<h5>正品保障</h5>
+										<p>正品保障，提供发票</p>
+								</li>
+								<img src="img/zheng2.png" >
+								<li>
+										<h5>正品保障</h5>
+										<p>正品保障，提供发票</p>
+								</li>
+								<img src="img/zheng3.png" >
+								<li>
+										<h5>正品保障</h5>
+										<p>正品保障，提供发票</p>
+								</li>
+								<img src="img/zheng3.png" >
+								<li>
+										<h5>正品保障</h5>
+										<p>正品保障，提供发票</p>
+								</li>
+								<img src="img/zheng3.png" >
+								<li>
+										<h5>正品保障</h5>
+										<p>正品保障，提供发票</p>
+								</li>		
+							</ul>
+						</div>
+						<div class="dizong">
+							<dl>
+								<dt>购物指南</dt>
+								<dd> <a href="#">购物流程 </a></dd>
+								<dd> <a href="#">会员介绍 </a></dd>
+								<dd> <a href="#">生活旅行/团购 </a></dd>
+								<dd> <a href="#">常见问题 </a></dd>
+								<dd> <a href="#">大家电 </a></dd>
+								<dd> <a href="#">联系客服 </a></dd>
+							</dl>
+							<dl>
+								<dt>购物指南</dt>
+								<dd> <a href="#">购物流程 </a></dd>
+								<dd> <a href="#">会员介绍 </a></dd>
+								<dd> <a href="#">生活旅行/团购 </a></dd>
+								<dd> <a href="#">常见问题 </a></dd>
+								<dd> <a href="#">大家电 </a></dd>
+								<dd> <a href="#">联系客服 </a></dd>
+							</dl>
+							<dl>
+								<dt>购物指南</dt>
+								<dd> <a href="#">购物流程 </a></dd>
+								<dd> <a href="#">会员介绍 </a></dd>
+								<dd> <a href="#">生活旅行/团购 </a></dd>
+								<dd> <a href="#">常见问题 </a></dd>
+								<dd> <a href="#">大家电 </a></dd>
+								<dd> <a href="#">联系客服 </a></dd>
+							</dl>
+							<dl>
+								<dt>购物指南</dt>
+								<dd> <a href="#">购物流程 </a></dd>
+								<dd> <a href="#">会员介绍 </a></dd>
+								<dd> <a href="#">生活旅行/团购 </a></dd>
+								<dd> <a href="#">常见问题 </a></dd>
+								<dd> <a href="#">大家电 </a></dd>
+								<dd> <a href="#">联系客服 </a></dd>
+							</dl>
+							<dl>
+								<dt>购物指南</dt>
+								<dd> <a href="#">购物流程 </a></dd>
+								<dd> <a href="#">会员介绍 </a></dd>
+								<dd> <a href="#">生活旅行/团购 </a></dd>
+								<dd> <a href="#">常见问题 </a></dd>
+								<dd> <a href="#">大家电 </a></dd>
+								<dd> <a href="#">联系客服 </a></dd>
+							</dl>
+							<dl>
+								<dt>帮助中心</dt>
+								<dd> 
+									<img src="upload/erweima.png" alt="">
+									<p>品优购客户端</p>
+								</dd>	
+							</dl>
+						</div>
+						<div class="dixia">
+							<p>
+								关于我们  |  联系我们  |  联系客服  |  商家入驻  |  营销中心  |  手机品优购  |  友情链接  |  销售联盟  |  品优购社区  |  品优购公益  |  English Site  |  Contact U
+							</p>
+							<p>
+								地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn  <br>
+								京ICP备08001421号京公网安备110108007702
+							</p>
+						</div>
+					</div>
+				</div>
+		
+			</div>
+	</body>
+</html>
