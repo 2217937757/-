@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .waiquan{
+            width: 620px;
+            height: 310px;
+            border: #aaa 3px solid;
+            margin: 60px auto;
+        }
+        #wanjia{
+            width: 300px;
+            height: 300px;
+            border: 5px solid #aaa;     
+            background: #00ffaa;
+            background-image: #00ffaa;
+            text-align: center;
+            font-size: 30px;
+        }
+        #diannao{
+            width: 300px;
+            height: 300px;
+            border: 5px solid #aaa; 
+            background: #0044ff;
+            background-image: #0044ff;
+            position: relative;
+            top: -310px;
+            left: 310px;
+            text-align: center;
+            font-size: 30px;
+        }
+        #jieguo{
+            text-align: center;
+            font-size: 30px;
+            margin: 30px auto;
+        }
+        .xuanze{
+            height: 10px;
+            padding-left: 160px;
+            position: relative;
+            top: -250px;
+        }
+        .xuanze input{
+            width: 50px;
+        }
+        #jieguo{
+            position: relative;
+            top: -250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="waiquan">
+        <div id="wanjia">
+            <img src="img/caiquan.gif" alt="">
+            你的出招
+        </div>
+        <div id="diannao">
+            <img src="img/caiquan.gif" alt="">
+            电脑出招
+        </div>
+
+        <div class="xuanze">
+            你的选择：
+            <input type="button" name="jiandao" value="剪刀" onclick="jiandao()">
+            <input type="button" name="shitou" value="石头" onclick="shitou()">
+            <input type="button" name="bu" value="布" onclick="bu()">
+        </div>
+        <div id="jieguo">
+            <span></span>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var sum = 3*Math.random()
+    function jiandao(){
+        document.getElementById("wanjia").innerHTML = "<img src='img/jiandao.jpg'>你的出招"
+        var jieguo = diannaochuzhao()
+        if(jieguo=="jiandao"){
+            document.getElementById("jieguo").innerHTML = "平局<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }else if(jieguo=="shitou"){
+            document.getElementById("jieguo").innerHTML = "你输了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }else{
+            document.getElementById("jieguo").innerHTML = "你赢了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }
+    }
+    function shitou(){
+        document.getElementById("wanjia").innerHTML = "<img src='img/shitou.jpg'>你的出招"
+        var jieguo = diannaochuzhao()
+        if(jieguo=="jiandao"){
+            document.getElementById("jieguo").innerHTML = "你赢了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }else if(jieguo=="shitou"){
+            document.getElementById("jieguo").innerHTML = "平局<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }else{
+            document.getElementById("jieguo").innerHTML = "你输了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }
+    }
+    function bu(){
+        document.getElementById("wanjia").innerHTML = "<img src='img/bu.jpg'>你的出招"
+        var jieguo = diannaochuzhao()
+        if(jieguo=="jiandao"){
+            document.getElementById("jieguo").innerHTML = "平局<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }else if(jieguo=="shitou"){
+            document.getElementById("jieguo").innerHTML = "你输了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }else{
+            document.getElementById("jieguo").innerHTML = "你赢了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }
+    }
+
+    function diannaochuzhao(){
+        if(sum<1){
+            document.getElementById("diannao").innerHTML = "<img src='img/jiandao.jpg'>电脑出招"
+            return "jiandao"
+        }else if(sum<2){
+            document.getElementById("diannao").innerHTML = "<img src='img/shitou.jpg'>电脑出招"
+            return "shitou"
+        }else{
+            document.getElementById("diannao").innerHTML = "<img src='img/bu.jpg'>电脑出招"
+            return "bu"
+        }
+    }
+    
+    function suaxin(){
+        location.reload()
+    }
+</script>
