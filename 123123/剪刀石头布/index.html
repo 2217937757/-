@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="img/caiquan.gif"/>
     <title>剪刀石头布</title>
     <style>
         body{
@@ -111,11 +110,11 @@
         document.getElementById("wanjia").innerHTML = "<img src='img/bu.jpg'>你的出招"
         var jieguo = diannaochuzhao()
         if(jieguo=="jiandao"){
-            document.getElementById("jieguo").innerHTML = "平局<br><input type='button' value='重新开始' onclick='suaxin()'>"
-        }else if(jieguo=="shitou"){
             document.getElementById("jieguo").innerHTML = "你输了<br><input type='button' value='重新开始' onclick='suaxin()'>"
-        }else{
+        }else if(jieguo=="shitou"){
             document.getElementById("jieguo").innerHTML = "你赢了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+        }else{
+            document.getElementById("jieguo").innerHTML = "平局<br><input type='button' value='重新开始' onclick='suaxin()'>"
         }
     }
 
