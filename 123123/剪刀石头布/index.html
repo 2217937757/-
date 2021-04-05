@@ -68,15 +68,20 @@
             电脑出招
         </div>
 
-        <div class="xuanze">
+        <div class="xuanze" id="anniu">
             你的选择：
-            <input type="button" name="jiandao" value="剪刀" onclick="jiandao()">
-            <input type="button" name="shitou" value="石头" onclick="shitou()">
-            <input type="button" name="bu" value="布" onclick="bu()">
+            <input type="button" id="jiandao" value="剪刀" onclick="jiandao()">
+            <input type="button" id="shitou" value="石头" onclick="shitou()">
+            <input type="button" id="bu" value="布" onclick="bu()">
         </div>
         <div id="jieguo">
             <span></span>
             
+        </div>
+        <div style="text-align: right;">
+            <span>版本号2.0<br>
+                <a href="gengxin.html">更新内容</a>
+            </span>
         </div>
     </div>
 </body>
@@ -84,37 +89,41 @@
 
 <script>
     var sum = 3*Math.random()
+    var cxks = "<br><input type='button' value='重新开始' onclick='suaxin()'>"
     function jiandao(){
         document.getElementById("wanjia").innerHTML = "<img src='img/jiandao.jpg'>你的出招"
         var jieguo = diannaochuzhao()
+        yincang()
         if(jieguo=="jiandao"){
-            document.getElementById("jieguo").innerHTML = "平局<br><input type='button' value='重新开始' onclick='suaxin()'>"
+            document.getElementById("jieguo").innerHTML = "平局"+cxks
         }else if(jieguo=="shitou"){
-            document.getElementById("jieguo").innerHTML = "你输了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+            document.getElementById("jieguo").innerHTML = "你输了"+cxks
         }else{
-            document.getElementById("jieguo").innerHTML = "你赢了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+            document.getElementById("jieguo").innerHTML = "你赢了"+cxks
         }
     }
     function shitou(){
         document.getElementById("wanjia").innerHTML = "<img src='img/shitou.jpg'>你的出招"
         var jieguo = diannaochuzhao()
+        yincang()
         if(jieguo=="jiandao"){
-            document.getElementById("jieguo").innerHTML = "你赢了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+            document.getElementById("jieguo").innerHTML = "你赢了"+cxks
         }else if(jieguo=="shitou"){
-            document.getElementById("jieguo").innerHTML = "平局<br><input type='button' value='重新开始' onclick='suaxin()'>"
+            document.getElementById("jieguo").innerHTML = "平局"+cxks
         }else{
-            document.getElementById("jieguo").innerHTML = "你输了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+            document.getElementById("jieguo").innerHTML = "你输了"+cxks
         }
     }
     function bu(){
         document.getElementById("wanjia").innerHTML = "<img src='img/bu.jpg'>你的出招"
         var jieguo = diannaochuzhao()
+        yincang()
         if(jieguo=="jiandao"){
-            document.getElementById("jieguo").innerHTML = "你输了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+            document.getElementById("jieguo").innerHTML = "你输了"+cxks
         }else if(jieguo=="shitou"){
-            document.getElementById("jieguo").innerHTML = "你赢了<br><input type='button' value='重新开始' onclick='suaxin()'>"
+            document.getElementById("jieguo").innerHTML = "你赢了"+cxks
         }else{
-            document.getElementById("jieguo").innerHTML = "平局<br><input type='button' value='重新开始' onclick='suaxin()'>"
+            document.getElementById("jieguo").innerHTML = "平局"+cxks
         }
     }
 
@@ -133,5 +142,9 @@
     
     function suaxin(){
         location.reload()
+    }
+
+    function yincang(){
+        document.getElementById("anniu").style.display="none"
     }
 </script>
