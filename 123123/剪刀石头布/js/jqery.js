@@ -2,18 +2,17 @@ $(document).ready(function(){
     $jiandao = "<img src='img/jiandao.jpg'>"
     $shitou = "<img src='img/shitou.jpg'>"
     $bu = "<img src='img/bu.jpg'>"
-    $cxks = ""
     $("#jiandao").click(function(){
         $("#wanjia").html($jiandao+"你的出招")
         $("#anniu").hide()
         jieguo()
         $jieguo = jieguo()
         if($jieguo=="0"){
-            $("#span").html("平局"+$cxks)
+            $("#span").html("平局")
         }else if($jieguo=="1"){
-            $("#span").html("你输了"+$cxks)
+            $("#span").html("你输了")
         }else{
-            $("#span").html("你赢了"+$cxks)
+            $("#span").html("你赢了")
         }
     })
     $("#shitou").click(function(){
@@ -22,11 +21,11 @@ $(document).ready(function(){
         jieguo()
         $jieguo = jieguo()
         if($jieguo=="0"){
-            $("#span").html("你赢了"+$cxks)
+            $("#span").html("你赢了")
         }else if($jieguo=="1"){
-            $("#span").html("平局"+$cxks)
+            $("#span").html("平局")
         }else{
-            $("#span").html("你输了"+$cxks)
+            $("#span").html("你输了")
         }
     })
     $("#bu").click(function(){
@@ -35,11 +34,11 @@ $(document).ready(function(){
         jieguo()
         $jieguo = jieguo()
         if($jieguo=="0"){
-            $("#span").html("你输了"+$cxks)
+            $("#span").html("你输了")
         }else if($jieguo=="1"){
-            $("#span").html("你赢了"+$cxks)
+            $("#span").html("你赢了")
         }else{
-            $("#span").html("平局"+$cxks)
+            $("#span").html("平局")
         }
     })
     function jieguo(){
