@@ -11,14 +11,20 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color: #000;
+            /* background-color: #000; */
             color: #fff;
+        }
+        body{
+            background: url(./img/dian.gif) no-repeat;
+            background-size:100% 100%;
+            background-attachment:fixed;
         }
         #zuiwai{
             display: inline-block;
-            border: 2px solid #ccc;
+            /* border: 2px solid #ccc; */
             border-radius: 14px;
             padding: 5px;
+            /* justify-content: center; */
         }
         header{
             padding: 30px;
@@ -40,7 +46,7 @@
             display: inline-block;
         }
 
-        video{  
+        /* video{  
             position: fixed;  
             right: 0px;  
             bottom: 0px;  
@@ -52,24 +58,22 @@
             /*filter: blur(15px); //背景模糊设置 */
             /*-webkit-filter: grayscale(100%);*/  
             /*filter:grayscale(100%); //背景灰度设置*/  
-            z-index:-11
+            /*z-index:-11
         }  
         source{  
             min-width: 100%;  
             min-height: 100%;  
             height: auto;  
             width: auto;  
-        } 
+        }  */
 
     </style>
 </head>
 <body id="test">
         <!-- 背景 -->
-<!-- 	
-        <video autoplay loop muted>
+        <!-- <video autoplay loop muted>
             <source src="./img/dian.mp4" type="video/mp4"/>
-        </video>
-	 -->
+        </video> -->
         <!-- 背景结束 -->
     <header>
         <p id="yt1">
@@ -183,18 +187,17 @@
             <!-- 				<a href="https://2217937757.github.io/XIAO/123123/选人/" target="_blank">选 人</a> -->
                 <a href="https://2217937757.github.io/XIAO/123123/桃饱/" target="_blank">桃饱网</a>
                 <a href="https://2217937757.github.io/XIAO/123123/支付/" target="_blank">打 钱</a>
+                <a href="https://2217937757.github.io/XIAO/123123/剪刀石头布/" target="_blank">剪刀石头布</a>
                 <a href="https://2217937757.github.io/XIAO/123123/无限弹窗/" target="_blank">无限弹窗</a>
         </div>
-        <div id="box"> <p style="text-align: center; font-size: 30px;">
-            原地传送
-        </p>
-        <p style="height: 20px;"></p>
-        <p>
-            <a href="https://2217937757.github.io/XIAO/" target="_blank">原地tp</a>
-        </p>
-		<p>
-            <a href="https://2217937757.github.io/XIAO/123123/剪刀石头布/" target="_blank">剪刀石头布</a>
-        </p>
+        <div id="box">
+            <p style="text-align: center; font-size: 30px;">
+                原地传送
+            </p>
+            <p style="height: 20px;"></p>
+            <p>
+                <a href="https://2217937757.github.io/XIAO/" target="_blank">原地tp</a>
+            </p>
         </div>
         <!-- <div id="box">
             6
@@ -240,7 +243,7 @@
 
 <!-- 鼠标点击效果 -->
 <script type="text/javascript">
-	alert('手机使用浏览器打开')
+// alert('手机使用浏览器打开')
     $(function(){
       var height=$(window).width();
         $('#test').css({
