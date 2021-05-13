@@ -1,50 +1,29 @@
-
-        body{
-            padding: 0;
-            margin: 0;
-        }
-        .waiquan{
-            width: 620px;
-            height: 310px;
-            border: #aaa 3px solid;
-            margin: 60px auto;
-        }
-        #wanjia{
-            width: 300px;
-            height: 300px;
-            border: 5px solid #aaa;     
-            /* background: #00ffaa;
-            background-image: #00ffaa; */
-            text-align: center;
-            font-size: 30px;
-        }
-        #diannao{
-            width: 300px;
-            height: 300px;
-            border: 5px solid #aaa; 
-            /* background: #0044ff;
-            background-image: #0044ff; */
-            position: relative;
-            top: -310px;
-            left: 310px;
-            text-align: center;
-            font-size: 30px;
-        }
-        #jieguo{
-            text-align: center;
-            font-size: 30px;
-            margin: 30px auto;
-        }
-        .xuanze{
-            height: 10px;
-            padding-left: 160px;
-            position: relative;
-            top: -250px;
-        }
-        .xuanze input{
-            width: 50px;
-        }
-        #jieguo{
-            position: relative;
-            top: -250px;
-        }
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.waiquan{
+    display: flex;
+    justify-content: center;
+}
+#wanjia{
+    font-size: 25px;
+}
+img{
+    border: solid 5px #ccc;
+    margin: 10px;
+}
+#diannao{
+    font-size: 25px;
+}
+#anniu{
+    margin-top: 10px;
+}
+input{
+    width: 80px;
+    border-radius: 10px;
+}
+#span{
+    font-size: 40px;
+}

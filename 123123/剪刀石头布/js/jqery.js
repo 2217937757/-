@@ -3,7 +3,7 @@ $(document).ready(function(){
     $shitou = "<img src='img/shitou.jpg'>"
     $bu = "<img src='img/bu.jpg'>"
     $("#jiandao").click(function(){
-        $("#wanjia").html($jiandao+"你的出招")
+        $("#wanjiaimg").html($jiandao)
         $("#anniu").hide()
         jieguo()
         $jieguo = jieguo()
@@ -16,7 +16,7 @@ $(document).ready(function(){
         }
     })
     $("#shitou").click(function(){
-        $("#wanjia").html($shitou+"你的出招")
+        $("#wanjiaimg").html($shitou)
         $("#anniu").hide()
         jieguo()
         $jieguo = jieguo()
@@ -29,7 +29,7 @@ $(document).ready(function(){
         }
     })
     $("#bu").click(function(){
-        $("#wanjia").html($bu+"你的出招")
+        $("#wanjiaimg").html($bu)
         $("#anniu").hide()
         jieguo()
         $jieguo = jieguo()
@@ -44,13 +44,13 @@ $(document).ready(function(){
     function jieguo(){
         $sum = Math.floor(Math.random()*3)
         if($sum==0){
-            $("#diannao").html($jiandao+"电脑出招")
+            $("#diannaoimg").html($jiandao)
             return 0
         }else if($sum==1){
-            $("#diannao").html($shitou+"电脑出招")
+            $("#diannaoimg").html($shitou)
             return 1
         }else{
-            $("#diannao").html($bu+"电脑出招")
+            $("#diannaoimg").html($bu)
             return 2
         }
     }
