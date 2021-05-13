@@ -7,15 +7,19 @@ body{
     display: flex;
     justify-content: center;
 }
-#wanjia{
-    font-size: 25px;
-}
 img{
-    border: solid 5px #ccc;
-    margin: 10px;
+    border: solid 3px #ccc;
+    border-radius: 14px;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+#wanjia{
+    font-size: 20px;
 }
 #diannao{
-    font-size: 25px;
+    font-size: 20px;
 }
 #anniu{
     margin-top: 10px;
