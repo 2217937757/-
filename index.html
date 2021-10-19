@@ -182,33 +182,4 @@
 			});
 		</script>
 
-<!-- 鼠标点击效果 -->
-<script type="text/javascript">
-// alert('手机使用浏览器打开')
-    $(function(){
-      var height=$(window).width();
-        $('#test').css({
-          'height':height,
-        });
-      var n=1;
-      $('#test').click(function(e){	
-        var $i=$('<b></b>').text('❤');
-        var x=e.pageX,y=e.pageY;//获取鼠标点击的位置坐标
-        $i.css({
-            "z-index": 9999,
-            "top": y - 20,
-            "left": x,
-            "position": "absolute",
-            "color": '#ccc',
-            "font-size": 20,
-          });
-          $("body").append($i);
-          $i.animate({
-            "top": y - 50,
-            "opacity": 0
-          }, 1500, function() {
-            $i.remove();
-          });//设置动画
-      });
-    });
-  </script>
+
